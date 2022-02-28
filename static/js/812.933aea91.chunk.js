@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkchaelin_react_web=self.webpackChunkchaelin_react_web||[]).push([[812],{812:function(e,c,n){n.r(c);n(791);var i=n(184);c.default=function(){return(0,i.jsx)("div",{children:(0,i.jsx)("div",{children:"\ud398\uc774\uc9c02"})})}}}]);
+//# sourceMappingURL=812.933aea91.chunk.js.map

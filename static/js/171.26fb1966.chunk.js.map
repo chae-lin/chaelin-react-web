@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/171.26fb1966.chunk.js","mappings":"qJAUA,UARc,WACZ,OACE,0BACE","sources":["Page/Page1/index.tsx"],"sourcesContent":["import React from \"react\";\n\nconst Page1 = () => {\n  return (\n    <div>\n      <div>페이지1</div>\n    </div>\n  );\n};\n\nexport default Page1;\n"],"names":[],"sourceRoot":""}

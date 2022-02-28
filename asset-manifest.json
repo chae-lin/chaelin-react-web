@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/chaelin-react-web/static/css/main.e6c13ad2.css",
+    "main.js": "/chaelin-react-web/static/js/main.edd42ff9.js",
+    "static/js/171.26fb1966.chunk.js": "/chaelin-react-web/static/js/171.26fb1966.chunk.js",
+    "static/js/812.933aea91.chunk.js": "/chaelin-react-web/static/js/812.933aea91.chunk.js",
+    "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
+    "index.html": "/chaelin-react-web/index.html",
+    "main.e6c13ad2.css.map": "/chaelin-react-web/static/css/main.e6c13ad2.css.map",
+    "main.edd42ff9.js.map": "/chaelin-react-web/static/js/main.edd42ff9.js.map",
+    "171.26fb1966.chunk.js.map": "/chaelin-react-web/static/js/171.26fb1966.chunk.js.map",
+    "812.933aea91.chunk.js.map": "/chaelin-react-web/static/js/812.933aea91.chunk.js.map",
+    "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.edd42ff9.js"
+  ]
+}
