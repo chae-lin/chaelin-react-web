@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Page1 = () => {
+const Toy2 = () => {
   return (
     <div>
       <div>페이지1</div>
@@ -10,4 +10,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
+export default Toy2;

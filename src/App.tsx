@@ -2,14 +2,16 @@ import * as React from "react";
 import loadable from "@loadable/component";
 import { Route, Routes } from "react-router";
 
-const Page1 = loadable(() => import("./Page/Page1"));
-const Page2 = loadable(() => import("./Page/Page2"));
+const Portfolio = loadable(() => import("./project/portfolio"));
+const Toy1 = loadable(() => import("./project/toy2"));
+const Toy2 = loadable(() => import("./project/toy1"));
 
 const App = (): JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<Page1 />} />
-      <Route path="/page2" element={<Page2 />} />
+      <Route path="/" element={<Portfolio />} />
+      {/* <Route path="/page1" element={<Toy1 />} />
+      <Route path="/page2" element={<Toy2 />} /> */}
     </Routes>
   );
 };

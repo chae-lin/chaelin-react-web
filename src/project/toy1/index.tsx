@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Page2 = () => {
+const Toy1 = () => {
   return (
     <div>
       <div>페이지2</div>
-      <Link to="/">Page 1</Link>
+      <Link to="/">main</Link>
+      <Link to="/page1">page1</Link>
     </div>
   );
 };
 
-export default Page2;
+export default Toy1;
