@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/chaelin-react-web/static/css/main.e6c13ad2.css",
-    "main.js": "/chaelin-react-web/static/js/main.6fcd9bb4.js",
-    "static/js/171.1f42338f.chunk.js": "/chaelin-react-web/static/js/171.1f42338f.chunk.js",
-    "static/js/812.10ccc5c8.chunk.js": "/chaelin-react-web/static/js/812.10ccc5c8.chunk.js",
+    "main.js": "/chaelin-react-web/static/js/main.c9a23945.js",
+    "static/css/320.3377c18f.chunk.css": "/chaelin-react-web/static/css/320.3377c18f.chunk.css",
+    "static/js/320.1f5fadc5.chunk.js": "/chaelin-react-web/static/js/320.1f5fadc5.chunk.js",
+    "static/js/138.da65c162.chunk.js": "/chaelin-react-web/static/js/138.da65c162.chunk.js",
+    "static/js/795.2bec81a0.chunk.js": "/chaelin-react-web/static/js/795.2bec81a0.chunk.js",
     "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
+    "static/js/709.a032b62f.chunk.js": "/chaelin-react-web/static/js/709.a032b62f.chunk.js",
     "index.html": "/chaelin-react-web/index.html",
-    "main.e6c13ad2.css.map": "/chaelin-react-web/static/css/main.e6c13ad2.css.map",
-    "main.6fcd9bb4.js.map": "/chaelin-react-web/static/js/main.6fcd9bb4.js.map",
-    "171.1f42338f.chunk.js.map": "/chaelin-react-web/static/js/171.1f42338f.chunk.js.map",
-    "812.10ccc5c8.chunk.js.map": "/chaelin-react-web/static/js/812.10ccc5c8.chunk.js.map",
-    "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map"
+    "main.c9a23945.js.map": "/chaelin-react-web/static/js/main.c9a23945.js.map",
+    "320.3377c18f.chunk.css.map": "/chaelin-react-web/static/css/320.3377c18f.chunk.css.map",
+    "320.1f5fadc5.chunk.js.map": "/chaelin-react-web/static/js/320.1f5fadc5.chunk.js.map",
+    "138.da65c162.chunk.js.map": "/chaelin-react-web/static/js/138.da65c162.chunk.js.map",
+    "795.2bec81a0.chunk.js.map": "/chaelin-react-web/static/js/795.2bec81a0.chunk.js.map",
+    "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map",
+    "709.a032b62f.chunk.js.map": "/chaelin-react-web/static/js/709.a032b62f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.6fcd9bb4.js"
+    "static/js/main.c9a23945.js"
   ]
 }
