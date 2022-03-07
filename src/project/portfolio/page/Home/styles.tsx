@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Wrap = styled.div`
-  position: relative;
-  display: flex;
-  min-height: 700px;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0 20px;
 `;
 
 export const BackgroundBox = styled.div`
@@ -34,7 +30,6 @@ export const BackgroundText = styled.span`
 
 export const TitleBox = styled.div`
   overflow: hidden;
-  padding: 0 20px;
   strong {
     display: block;
     margin-bottom: 40px;

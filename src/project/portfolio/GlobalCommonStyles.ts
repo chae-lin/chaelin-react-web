@@ -144,13 +144,89 @@ const GlobalCommonStyle = css`
     min-width: 320px;
     height: 100%;
     background-color: #1f2029;
+    word-break: keep-all;
+  }
+
+  .swiper-vertical {
+    touch-action: pan-x;
+    @media (min-width: 1020px) {
+      min-height: 660px;
+    }
+
+    & > .swiper-wrapper {
+      flex-direction: column;
+    }
+
+    & > .swiper-pagination {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      padding: 2vw;
+      z-index: 5;
+
+      .swiper-pagination-bullet {
+        position: relative;
+        margin-left: 0.8vw;
+        padding: 0.5vw;
+        font-size: 1.4vw;
+        font-weight: 600;
+        color: #000;
+        cursor: pointer;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -0.2vw;
+          left: 0;
+          right: 0;
+          width: 0;
+          height: 0.2vw;
+          background-color: #000;
+          transition: width cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.5s;
+        }
+
+        &.swiper-pagination-bullet-active:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .swiper-horizontal {
+    padding: 2.5vw 0;
+    touch-action: pan-y;
+
+    .swiper-pagination {
+      position: absolute;
+      text-align: center;
+      transition: 0.3s opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      .swiper-pagination-bullet {
+        display: inline-block;
+        width: 1vw;
+        height: 1vw;
+        margin: 0 0.5vw;
+        border-radius: 50%;
+        background: #000;
+        opacity: 0.2;
+        cursor: pointer;
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   .swiper {
     overflow: hidden;
     position: relative;
     height: 100%;
-    touch-action: pan-x;
   }
 
   .swiper-wrapper {
@@ -158,7 +234,6 @@ const GlobalCommonStyle = css`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     box-sizing: content-box;
     transition-property: transform;
     transform: translate3d(0px, 0, 0);
@@ -167,6 +242,8 @@ const GlobalCommonStyle = css`
 
   .swiper-slide {
     position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 100%;
     flex-shrink: 0;
@@ -175,21 +252,32 @@ const GlobalCommonStyle = css`
 
   .swiper-slide-active {
     // home
-    .home-title {
+    & .home-title {
       svg text {
         animation: stroke 1s linear;
         animation-fill-mode: forwards;
       }
     }
 
-    .progress-bar {
+    // skill
+    & .progress-bar {
       width: 100%;
-      transition: width cubic-bezier(0.4, 0, 0.2, 1) 1s;
+      transition: width cubic-bezier(0.46, 0.03, 0.52, 0.96) 1s;
     }
-    .progress-text {
+    & .progress-percent {
       opacity: 1;
-      transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-      transition-delay: 0.6s;
+      transition: opacity cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
+      transition-delay: 0.7s;
+    }
+
+    // archiving
+    & .archiving-item {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s;
+      &:nth-of-type(2) {
+        transition-delay: 0.1s;
+      }
     }
   }
 `;

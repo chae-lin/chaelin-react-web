@@ -3,25 +3,27 @@ import { Global } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 import GlobalCommonStyle from "./GlobalCommonStyles";
-
-import { Home, Skill } from "./page";
-import "swiper/css/pagination";
+import { Archiving, Home, Project, Skill } from "./page";
 
 const Portfolio = () => {
+  const pagiList = ["Home", "Skill", "Project", "Archiving"];
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + pagiList[index] + "</span>";
+    },
+  };
+
   return (
     <>
       <Global styles={GlobalCommonStyle} />
       <Swiper
         direction={"vertical"}
         slidesPerView={1}
-        spaceBetween={30}
         mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={pagination}
         modules={[Mousewheel, Pagination]}
         onSlideChange={() => console.log("slide change")}
-        className="mySwiper"
       >
         <SwiperSlide>
           <Home />
@@ -29,9 +31,12 @@ const Portfolio = () => {
         <SwiperSlide>
           <Skill />
         </SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>
+          <Project />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Archiving />
+        </SwiperSlide>
       </Swiper>
     </>
   );

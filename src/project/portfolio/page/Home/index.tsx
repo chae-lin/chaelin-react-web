@@ -1,5 +1,3 @@
-import React, { FC, useRef, useState } from "react";
-import { useScroll } from "../../hooks/useScroll";
 import * as S from "./styles";
 
 export const Home = () => {
