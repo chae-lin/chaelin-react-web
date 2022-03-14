@@ -213,12 +213,53 @@ const GlobalCommonStyle = css`
         height: 1vw;
         margin: 0 0.5vw;
         border-radius: 50%;
-        background: #000;
+        background: #8f8f8f;
         opacity: 0.2;
         cursor: pointer;
         &.swiper-pagination-bullet-active {
           opacity: 1;
         }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.6vw;
+      height: 5vw;
+      margin-top: -2.5vw;
+      z-index: 10;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      &:after {
+        content: "";
+        width: 2.5vw;
+        height: 2.5vw;
+        border-top: 0.5vw solid #8f8f8f;
+        border-right: 0.5vw solid #8f8f8f;
+        transform: rotate(225deg);
+      }
+      &.swiper-button-disabled {
+        opacity: 0.2;
+        cursor: auto;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 2vw;
+      &:after {
+        transform: rotate(225deg);
+        margin-left: 1.1vw;
+      }
+    }
+
+    .swiper-button-next {
+      right: 2vw;
+      &:after {
+        transform: rotate(45deg);
+        margin-right: 1.1vw;
       }
     }
   }

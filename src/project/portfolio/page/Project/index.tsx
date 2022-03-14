@@ -1,13 +1,26 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { PageLayout } from "../../common";
-
-import "swiper/css/navigation";
 import { ProjectItem } from "./ProjectItem";
 
 import imgWork1 from "../../assets/images/work1.png";
 
 export const Project = () => {
+  const projectList = [
+    {
+      imgUrl: imgWork1,
+      title: "HTML5",
+      tags: ["dd", "dd"],
+      handleClick: () => null,
+    },
+    {
+      imgUrl: imgWork1,
+      title: "HTML5",
+      tags: ["dd", "dd"],
+      handleClick: () => null,
+    },
+  ];
+
   return (
     <PageLayout type="project" title="Project">
       <Swiper
@@ -34,22 +47,16 @@ export const Project = () => {
           },
         }}
       >
-        <SwiperSlide>
-          <ProjectItem
-            imgUrl={imgWork1}
-            title="d"
-            tags={["dd", "dd"]}
-            handleClick={() => null}
-          />
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {projectList?.map(({ imgUrl, title, tags, handleClick }) => (
+          <SwiperSlide>
+            <ProjectItem
+              imgUrl={imgUrl}
+              title={title}
+              tags={tags}
+              handleClick={handleClick}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </PageLayout>
   );

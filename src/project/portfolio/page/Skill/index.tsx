@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { PageLayout } from "../../common";
 import { Progress } from "./Progress";
-import * as S from "./styles";
 
 export const Skill = () => {
   const dataList = [

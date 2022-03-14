@@ -12,7 +12,7 @@ const Title = styled.h2`
   position: relative;
   display: inline-block;
   margin-bottom: 5vw;
-  font-size: 6.5vw;
+  font-size: 5.5vw;
   &::before {
     content: "";
     position: absolute;
