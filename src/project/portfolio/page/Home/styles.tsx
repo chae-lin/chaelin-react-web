@@ -43,6 +43,7 @@ export const TitleBox = styled.div`
     font-size: 100px;
     fill: transparent;
     stroke-dasharray: 326px;
+
     @keyframes stroke {
       0% {
         stroke: #fff;

@@ -3,12 +3,30 @@ import styled from "@emotion/styled";
 export const ProjectWrap = styled.div`
   cursor: pointer;
   opacity: 0.5;
-  transition: all cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
+  transition: opacity ease-in-out 0.1s;
   &:hover {
     opacity: 1;
-    transform: translateY(-1.5vw);
-    img {
-      transform: scale(1.1);
+    animation: blink 1s ease-in-out infinite alternate;
+
+    @keyframes blink {
+      16.65% {
+        transform: translateY(8px);
+      }
+      33.3% {
+        transform: translateY(-6px);
+      }
+      49.95% {
+        transform: translateY(4px);
+      }
+      66.6% {
+        transform: translateY(-2px);
+      }
+      83.25% {
+        transform: translateY(1px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   }
 `;
@@ -30,7 +48,6 @@ export const ProjectImage = styled.div`
   img {
     width: 100%;
     height: 100%;
-    transition: scale cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
   }
 `;
 
