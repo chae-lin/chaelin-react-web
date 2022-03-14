@@ -194,7 +194,6 @@ const GlobalCommonStyle = css`
   }
 
   .swiper-horizontal {
-    padding: 2.5vw 0;
     touch-action: pan-y;
 
     .swiper-pagination {
@@ -262,6 +261,15 @@ const GlobalCommonStyle = css`
         margin-right: 1.1vw;
       }
     }
+
+    .swiper-wrapper {
+      padding: 2.5vw 0;
+    }
+
+    .swiper-slide {
+      opacity: 0;
+      transform: translateY(4vw);
+    }
   }
 
   .swiper {
@@ -309,6 +317,33 @@ const GlobalCommonStyle = css`
       opacity: 1;
       transition: opacity cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
       transition-delay: 0.7s;
+    }
+
+    // swiper
+    .swiper-horizontal {
+      .swiper-slide {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s;
+        &:nth-of-type(2) {
+          transition-delay: 0.1s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 0.2s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 0.3s;
+        }
+        &:nth-of-type(5) {
+          transition-delay: 0.4s;
+        }
+        &:nth-of-type(6) {
+          transition-delay: 0.5s;
+        }
+        &:nth-of-type(7) {
+          transition-delay: 0.6s;
+        }
+      }
     }
 
     // archiving
