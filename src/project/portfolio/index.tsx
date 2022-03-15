@@ -23,7 +23,6 @@ const Portfolio = () => {
         mousewheel={true}
         pagination={pagination}
         modules={[Mousewheel, Pagination]}
-        onSlideChange={() => console.log("slide change")}
         className="swiper-portfolio"
       >
         <SwiperSlide>

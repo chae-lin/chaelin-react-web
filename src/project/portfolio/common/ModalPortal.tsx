@@ -5,10 +5,10 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const ModalPortal: FC<Props> = ({ children }) => {
-  const ModalPortal = document.createElement("div");
-  ModalPortal.setAttribute("id", "modal-root");
-  document.body.appendChild(ModalPortal);
+const modalPortal = document.createElement("div");
+modalPortal.setAttribute("id", "modal-root");
+document.body.appendChild(modalPortal);
 
-  return reactDom.createPortal(children, ModalPortal);
+export const ModalPortal: FC<Props> = ({ children }) => {
+  return reactDom.createPortal(children, modalPortal);
 };
