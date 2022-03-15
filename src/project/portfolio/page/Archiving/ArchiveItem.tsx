@@ -23,11 +23,12 @@ export const ArchiveItem: FC<Props> = ({
         <img src={imgUrl} alt={title} />
       </S.ProjectImage>
       <S.ItemText>
-        <Link to={link}>{text}</Link> 입니다.
+        <button onClick={() => window.open(link, "_blank")}>{text}</button>
+        입니다.
       </S.ItemText>
       <S.ItemInfoList>
-        {infos.map((info) => (
-          <S.ItemInfo>{info}</S.ItemInfo>
+        {infos.map((info, index) => (
+          <S.ItemInfo key={index}>{info}</S.ItemInfo>
         ))}
       </S.ItemInfoList>
     </S.ArchiveItemWrpa>

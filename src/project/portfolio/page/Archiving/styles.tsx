@@ -9,7 +9,7 @@ export const ArchiveItemWrpa = styled.div`
   width: 34vw;
   max-width: 420px;
   margin: 0 2vw;
-  padding: 3.4vw;
+  padding: 2.6vw;
   border-radius: 1vw;
   background-color: #fff;
   box-shadow: 0.4vw 0.4vw 0.5vw 0.3vw #72727285;
@@ -18,7 +18,7 @@ export const ArchiveItemWrpa = styled.div`
 `;
 
 export const ProjectImage = styled.h3`
-  width: 12vw;
+  width: 13vw;
   height: 4vw;
   margin-bottom: 1vw;
   img {
@@ -29,8 +29,13 @@ export const ProjectImage = styled.h3`
 
 export const ItemText = styled.p`
   font-size: 1.8vw;
-  a {
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.8vw;
+    font-weight: 800;
     color: #dc5361;
+    cursor: pointer;
   }
 `;
 

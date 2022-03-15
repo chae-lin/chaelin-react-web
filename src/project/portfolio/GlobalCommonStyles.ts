@@ -140,6 +140,15 @@ const GlobalCommonStyle = css`
     border-spacing: 0;
   }
 
+  .blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+
   #root {
     min-width: 320px;
     height: 100%;
@@ -147,8 +156,9 @@ const GlobalCommonStyle = css`
     word-break: keep-all;
   }
 
-  .swiper-vertical {
+  .swiper-portfolio {
     touch-action: pan-x;
+
     @media (min-width: 1020px) {
       min-height: 660px;
     }
@@ -193,7 +203,7 @@ const GlobalCommonStyle = css`
     }
   }
 
-  .swiper-horizontal {
+  .swiper-project {
     touch-action: pan-y;
 
     .swiper-pagination {
@@ -272,31 +282,47 @@ const GlobalCommonStyle = css`
     }
   }
 
-  .swiper {
+  .swiper-modal {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+
+    .swiper-wrapper {
+      display: flex;
+      box-sizing: content-box;
+    }
+
+    .swiper-slide {
+      flex-shrink: 0;
+    }
+  }
+
+  .swiper-portfolio,
+  .swiper-project {
     overflow: hidden;
     position: relative;
     height: 100%;
-  }
 
-  .swiper-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    box-sizing: content-box;
-    transition-property: transform;
-    transform: translate3d(0px, 0, 0);
-    z-index: 1;
-  }
+    .swiper-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      box-sizing: content-box;
+      transition-property: transform;
+      transform: translate3d(0px, 0, 0);
+      z-index: 1;
+    }
 
-  .swiper-slide {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    transition-property: transform;
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      transition-property: transform;
+    }
   }
 
   .swiper-slide-active {

@@ -72,7 +72,7 @@ export const TitleBox = styled.div`
     }
 
     svg {
-      &:not(:first-child) {
+      &:not(:first-of-type) {
         margin-top: -5vw;
       }
       text {

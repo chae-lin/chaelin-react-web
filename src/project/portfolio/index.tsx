@@ -24,6 +24,7 @@ const Portfolio = () => {
         pagination={pagination}
         modules={[Mousewheel, Pagination]}
         onSlideChange={() => console.log("slide change")}
+        className="swiper-portfolio"
       >
         <SwiperSlide>
           <Home />

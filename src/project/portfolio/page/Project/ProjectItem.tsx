@@ -1,6 +1,4 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
-
 import * as S from "./styles";
 
 interface Props {
@@ -23,8 +21,8 @@ export const ProjectItem: FC<Props> = ({
       </S.ProjectImage>
       <S.ProjectTitle>{title}</S.ProjectTitle>
       <S.ProjectTag>
-        {tags.map((tag) => (
-          <span>#{tag}</span>
+        {tags.map((tag, index) => (
+          <span key={index}>#{tag}</span>
         ))}
       </S.ProjectTag>
     </S.ProjectWrap>

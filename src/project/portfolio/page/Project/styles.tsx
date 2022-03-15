@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const ProjectWrap = styled.div`
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity ease-in-out 0.1s;
   &:hover {
     opacity: 1;

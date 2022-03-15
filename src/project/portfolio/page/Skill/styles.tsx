@@ -4,7 +4,7 @@ export const Wrap = styled.div`
   padding: 0 20px;
 `;
 
-export const ProgressList = styled.div`
+export const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
