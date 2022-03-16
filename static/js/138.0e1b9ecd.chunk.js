@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkchaelin_react_web=self.webpackChunkchaelin_react_web||[]).push([[138],{2138:function(e,c,n){n.r(c);n(2791);var r=n(3504),a=n(184);c.default=function(){return(0,a.jsxs)("div",{children:[(0,a.jsx)("div",{children:"\ud398\uc774\uc9c01"}),(0,a.jsx)(r.rU,{to:"/page2",children:"Page 2"})]})}}}]);
+//# sourceMappingURL=138.0e1b9ecd.chunk.js.map
