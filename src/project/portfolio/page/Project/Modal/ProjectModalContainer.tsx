@@ -89,10 +89,6 @@ export const ProjectModalContainer: FC<props> = ({
 }) => {
   const swiperRef = useRef() as any;
 
-  useEffect(() => {
-    swiperRef.current?.swiper.slideTo(clickIndex);
-  }, [clickIndex]);
-
   return (
     <ModalPortal>
       <S.ModalWrap className={isMounted ? "open-modal" : "close-modal"}>
@@ -103,6 +99,7 @@ export const ProjectModalContainer: FC<props> = ({
           navigation={true}
           modules={[Navigation]}
           className="swiper-modal"
+          onSwiper={(swiper) => swiper.slideTo(clickIndex)}
         >
           {modalList?.map((modalData, index) => (
             <SwiperSlide key={index}>
