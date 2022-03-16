@@ -10,9 +10,8 @@ type DataProps = {
   bgImg: string;
   title: string;
   standard: string;
-  summartTitle: string;
   summarys: summaryProps[];
-  overViewLink: string;
+  overViewLink: string[];
   overViewImg: string;
 };
 
@@ -38,7 +37,7 @@ export const ProjectModalItem: FC<Props> = ({
         </S.TopTitleBox>
       </S.TopArea>
       <S.SummartArea>
-        <S.AreaTitle>{modalData.summartTitle}</S.AreaTitle>
+        <S.AreaTitle>Summary</S.AreaTitle>
         <dl>
           {modalData.summarys.map((summary, index) => (
             <S.SummartBox key={index}>
@@ -57,11 +56,16 @@ export const ProjectModalItem: FC<Props> = ({
       <S.OverViewArea>
         <S.AreaTitle>Overview</S.AreaTitle>
         <S.OverViewContent>
-          <S.OverViewButton
-            onClick={() => window.open(modalData.overViewLink, "_blank")}
-          >
-            Visit Website
-          </S.OverViewButton>
+          {modalData.overViewLink.map((link) => (
+            <S.OverViewButton
+              overViewLink={link}
+              onClick={() =>
+                modalData.overViewLink ? window.open(link, "_blank") : null
+              }
+            >
+              {link ? "Visit Website" : "Visit Website  (preparing)"}
+            </S.OverViewButton>
+          ))}
           <img src={modalData.overViewImg} alt="overview" />
         </S.OverViewContent>
       </S.OverViewArea>

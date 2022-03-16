@@ -246,8 +246,8 @@ const GlobalCommonStyle = css`
         content: "";
         width: 2.5vw;
         height: 2.5vw;
-        border-top: 0.5vw solid #8f8f8f;
-        border-right: 0.5vw solid #8f8f8f;
+        border-top: 0.5vw solid #757575;
+        border-right: 0.5vw solid #757575;
         transform: rotate(225deg);
       }
       &.swiper-button-disabled {
@@ -295,6 +295,35 @@ const GlobalCommonStyle = css`
     .swiper-slide {
       position: relative;
       flex-shrink: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: fixed;
+      bottom: 30%;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: solid #757575;
+      border-width: 0 0 5px 5px;
+      outline: none;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+      transform: rotate(45deg);
+    }
+
+    .swiper-button-next {
+      right: 20px;
+      transform: rotate(-135deg);
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.2;
+      cursor: auto;
     }
   }
 

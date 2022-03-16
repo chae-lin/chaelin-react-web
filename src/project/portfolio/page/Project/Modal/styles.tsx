@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const ModalWrap = styled.div`
@@ -166,7 +167,9 @@ export const OverViewContent = styled.div`
   }
 `;
 
-export const OverViewButton = styled.button`
+export const OverViewButton = styled("button", {
+  shouldForwardProp: (props) => props !== "overViewLink",
+})<{ overViewLink: string }>`
   display: inline-block;
   margin-bottom: 15px;
   padding: 9px 35px;
@@ -181,11 +184,20 @@ export const OverViewButton = styled.button`
   transition-property: transform;
   transform-origin: 0 100%;
   text-decoration: none;
-  cursor: pointer;
 
-  &:hover {
-    transform: skew(-10deg);
+  & + & {
+    margin-left: 20px;
   }
+
+  ${({ overViewLink }) =>
+    overViewLink &&
+    css`
+      cursor: pointer;
+
+      &:hover {
+        transform: skew(-10deg);
+      }
+    `}
 `;
 
 export const CloseButton = styled.button`

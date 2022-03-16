@@ -5,7 +5,7 @@ import { PageLayout } from "../../common";
 import { ProjectItem } from "./ProjectItem";
 import { ProjectModalContainer as ProjectModal } from "./Modal/ProjectModalContainer";
 
-import imgWork1 from "../../assets/images/work1.png";
+import imgWork1 from "../../assets/images/work1_v2.jpg";
 import imgWork2 from "../../assets/images/work2.jpg";
 import imgWork3 from "../../assets/images/work3.png";
 import imgWork4 from "../../assets/images/work4.jpg";
@@ -38,6 +38,7 @@ const projectList = [
     imgUrl: imgWork3,
     title: "SMART PLACE",
     tags: ["#적응형", "sass", "#React", "#React Native", "#Component"],
+    bgColor: "#b8b8ba",
   },
   {
     imgUrl: imgWork4,
@@ -109,10 +110,11 @@ export const ProjectContainer = () => {
         }}
         className="swiper-project"
       >
-        {projectList?.map(({ imgUrl, title, tags }, index) => (
+        {projectList?.map(({ imgUrl, title, tags, bgColor }, index) => (
           <SwiperSlide key={index}>
             <ProjectItem
               imgUrl={imgUrl}
+              bgColor={bgColor}
               title={title}
               tags={tags}
               handleClick={() => handleClick(index)}

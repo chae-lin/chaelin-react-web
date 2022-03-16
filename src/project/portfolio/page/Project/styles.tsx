@@ -31,10 +31,13 @@ export const ProjectWrap = styled.div`
   }
 `;
 
-export const ProjectImage = styled.div`
+export const ProjectImage = styled("div", {
+  shouldForwardProp: (props) => props !== "bgColor",
+})<{ bgColor: string }>`
   overflow: hidden;
   position: relative;
   border-radius: 1vw;
+  background-color: ${({ bgColor }) => bgColor};
   &:after {
     content: "";
     position: absolute;
