@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { ModalPortal } from "../../../common";
 import { ProjectModalItem } from "./ProjectModalItem";
 import * as S from "./styles";
@@ -87,15 +87,10 @@ export const ProjectModalContainer: FC<props> = ({
   clickIndex,
   handleClose,
 }) => {
-  const swiperRef = useRef() as any;
-
   return (
     <ModalPortal>
       <S.ModalWrap className={isMounted ? "open-modal" : "close-modal"}>
         <Swiper
-          onInit={(core: SwiperCore) => {
-            swiperRef.current = core.el;
-          }}
           navigation={true}
           modules={[Navigation]}
           className="swiper-modal"
