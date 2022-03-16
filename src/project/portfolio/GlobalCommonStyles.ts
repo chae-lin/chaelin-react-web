@@ -181,7 +181,7 @@ const GlobalCommonStyle = css`
         padding: 0.5vw;
         font-size: 1.4vw;
         font-weight: 600;
-        color: #000;
+        color: #757575;
         cursor: pointer;
 
         &:after {
@@ -192,7 +192,7 @@ const GlobalCommonStyle = css`
           right: 0;
           width: 0;
           height: 0.2vw;
-          background-color: #000;
+          background-color: #757575;
           transition: width cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.5s;
         }
 

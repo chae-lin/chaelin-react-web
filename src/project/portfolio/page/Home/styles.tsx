@@ -81,3 +81,79 @@ export const TitleBox = styled.div`
     }
   }
 `;
+
+export const ScrollWrap = styled.div`
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+`;
+
+export const ScrollMouse = styled.span`
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px solid #757575;
+  border-radius: 50px;
+  box-sizing: border-box;
+
+  &:before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #757575;
+    border-radius: 100%;
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+  }
+
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes sdb {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`;
+
+export const ScrollText = styled.span`
+  display: block;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #757575;
+`;

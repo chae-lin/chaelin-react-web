@@ -1,3 +1,4 @@
+import { Scroll } from "./Scroll";
 import * as S from "./styles";
 
 export const HomeContainer = () => {
@@ -21,6 +22,7 @@ export const HomeContainer = () => {
           </svg>
         </h1>
       </S.TitleBox>
+      <Scroll />
     </S.Wrap>
   );
 };
