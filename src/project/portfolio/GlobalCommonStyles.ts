@@ -293,6 +293,7 @@ const GlobalCommonStyle = css`
     }
 
     .swiper-slide {
+      position: relative;
       flex-shrink: 0;
     }
   }
