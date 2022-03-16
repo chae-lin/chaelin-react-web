@@ -6,26 +6,33 @@ const dataList = [
   {
     title: "HTML5",
     percent: 95,
-    text: "웹접근성을 준수하여 태그를 사용합니다.",
-  },
-  {
-    title: "Git",
-    percent: 70,
-    text: "GitLab을 통해 프로젝트 버전 관리를 진행하였으며, GitHu을 활용하여 블로그 및 포트폴리오 사이트를 관리합니다.",
+    text: "웹표준을 준수하며, 시멘틱태그를 사용한 시멘틱 마크업을 할 수 있습니다.",
   },
   {
     title: "CSS",
     percent: 95,
-    text: "네이버 검색 페이지 작성시 IE7까지 대응이 필요한 페이지를 제작한 경험이 있습니다.",
+    text: "반응형 웹페이지를 주로 제작하였으며, animaion과 같은 인터렉션기능을 사용할 수 있습니다. 또한 css성능을 향상시킬 수 있습니다.",
   },
-  { title: "SCSS", percent: 80, text: "sdfsdf" },
+  {
+    title: "Git",
+    percent: 80,
+    text: "GitLab을 통해 프로젝트 버전 관리를 진행하였으며, GitHu을 활용하여 스터디 및 포트폴리오 사이트를 관리합니다.",
+  },
   {
     title: "Javascript",
     percent: 75,
-    text: "javascript의 기본 문법을 익혀 웹게임을 제작하고 ajax를 통해 서버와 통신하여 워크스페이스 생성기능을 구현하였습니다.",
+    text: "javascript의 기본 문법을 익혀 웹게임을 제작하였으며, async와 await를 사용한 비동기 처리를 할 수 있습니다. 또한 서버와 통신하여 워크스페이스 생성기능을 구현하였습니다.",
   },
-  { title: "React", percent: 60, text: "sdfsdf" },
-  { title: "Typescript", percent: 40, text: "sdfsdf" },
+  {
+    title: "React",
+    percent: 60,
+    text: "react Hooks을 사용한 함수형 컴포넌트를 제작할 수 있습니다. 또한 useMemo, useCallback 등을 사용하여 성능을 최적화 합니다.",
+  },
+  {
+    title: "Typescript",
+    percent: 60,
+    text: "코드에 목적을 명시하고 목적에 맞지 않는 타입의 변수나 함수들에서 에러를 발생시켜 버그를 사전에 제거할 수 있습니다.",
+  },
 ];
 
 export const SkillContainer = () => {
