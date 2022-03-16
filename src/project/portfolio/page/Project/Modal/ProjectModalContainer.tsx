@@ -29,7 +29,7 @@ const modalList = [
     summarys: [
       {
         summaryTitle: "프로젝트 기간",
-        summaryInfo: ["2020.06.03 ~ 2020.07.10"],
+        summaryInfo: ["2020.06.03 ~ 2020.08.26"],
       },
       {
         summaryTitle: "사이트 특징",
