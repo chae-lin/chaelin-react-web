@@ -159,10 +159,6 @@ const GlobalCommonStyle = css`
   .swiper-portfolio {
     touch-action: pan-x;
 
-    @media (min-width: 1020px) {
-      min-height: 660px;
-    }
-
     & > .swiper-wrapper {
       flex-direction: column;
     }
@@ -170,15 +166,17 @@ const GlobalCommonStyle = css`
     & > .swiper-pagination {
       position: absolute;
       top: 0;
+      left: 0;
       right: 0;
       display: flex;
+      justify-content: flex-end;
       padding: 20px;
+      background-color: #1f2029;
       z-index: 5;
 
       .swiper-pagination-bullet {
         position: relative;
         margin-right: 16px;
-        padding: 0.5vw;
         padding: 5px;
         font-size: 16px;
         line-height: 24px;
@@ -224,9 +222,9 @@ const GlobalCommonStyle = css`
 
       .swiper-pagination-bullet {
         display: inline-block;
-        width: 1vw;
-        height: 1vw;
-        margin: 0 0.5vw;
+        width: 12px;
+        height: 12px;
+        margin: 0 4px;
         border-radius: 50%;
         background: #8f8f8f;
         opacity: 0.2;
@@ -236,26 +234,22 @@ const GlobalCommonStyle = css`
         }
       }
     }
+
     .swiper-button-prev,
     .swiper-button-next {
+      position: absolute;
+      top: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 3.6vw;
-      height: 5vw;
-      margin-top: -2.5vw;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+      border: solid #757575;
+      border-width: 0 0 5px 5px;
+      outline: none;
       z-index: 10;
       cursor: pointer;
-      position: absolute;
-      top: 50%;
-      &:after {
-        content: "";
-        width: 2.5vw;
-        height: 2.5vw;
-        border-top: 0.5vw solid #757575;
-        border-right: 0.5vw solid #757575;
-        transform: rotate(225deg);
-      }
       &.swiper-button-disabled {
         opacity: 0.2;
         cursor: auto;
@@ -263,23 +257,17 @@ const GlobalCommonStyle = css`
     }
 
     .swiper-button-prev {
-      left: 2vw;
-      &:after {
-        transform: rotate(225deg);
-        margin-left: 1.1vw;
-      }
+      left: 20px;
+      transform: rotate(45deg);
     }
 
     .swiper-button-next {
-      right: 2vw;
-      &:after {
-        transform: rotate(45deg);
-        margin-right: 1.1vw;
-      }
+      right: 20px;
+      transform: rotate(-135deg);
     }
 
     .swiper-wrapper {
-      padding: 2.5vw 0;
+      padding: 30px 0;
     }
 
     .swiper-slide {
@@ -315,6 +303,15 @@ const GlobalCommonStyle = css`
       outline: none;
       z-index: 10;
       cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        border-width: 0 0 4px 4px;
+      }
     }
 
     .swiper-button-prev {
@@ -412,10 +409,15 @@ const GlobalCommonStyle = css`
     & .archiving-item {
       opacity: 1;
       transform: translateY(0);
-      transition: all cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s;
+      transition: opacity cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s,
+        transform cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s;
       &:nth-of-type(2) {
         transition-delay: 0.1s;
       }
+    }
+
+    .scroll-wrap {
+      opacity: 1;
     }
   }
 `;

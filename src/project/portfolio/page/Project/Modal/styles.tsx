@@ -167,11 +167,16 @@ export const OverViewContent = styled.div`
   }
 `;
 
+export const OverViewButtonBox = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+`;
+
 export const OverViewButton = styled("button", {
   shouldForwardProp: (props) => props !== "overViewLink",
 })<{ overViewLink: string }>`
   display: inline-block;
-  margin-bottom: 15px;
   padding: 9px 35px;
   font-size: 18px;
   line-height: 28px;
@@ -184,10 +189,6 @@ export const OverViewButton = styled("button", {
   transition-property: transform;
   transform-origin: 0 100%;
   text-decoration: none;
-
-  & + & {
-    margin-left: 20px;
-  }
 
   ${({ overViewLink }) =>
     overViewLink &&

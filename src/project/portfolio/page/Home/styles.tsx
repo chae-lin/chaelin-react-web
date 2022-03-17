@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
 
-export const BackgroundBox = styled.div`
-  position: relative;
-  z-index: -1;
-`;
-
 export const BackgroundText = styled.span`
   position: fixed;
   top: 0;
@@ -24,9 +19,52 @@ export const BackgroundText = styled.span`
   -webkit-text-fill-color: transparent;
 `;
 
+export const BackgroundImage1 = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  animation: cloud1 3s infinite linear;
+
+  @keyframes cloud1 {
+    0%,
+    100% {
+      transform: translate(-3%, -4%);
+    }
+    50% {
+      transform: translate(-4%, -3%);
+    }
+  }
+`;
+
+export const BackgroundImage2 = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  animation: cloud2 3s infinite linear;
+
+  @keyframes cloud2 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(1%, 1%);
+    }
+  }
+`;
+
 export const TitleBox = styled.div`
   overflow: hidden;
   padding: 0 20px;
+  z-index: 5;
 
   strong {
     display: block;
@@ -84,6 +122,7 @@ export const ScrollWrap = styled.div`
   left: 50%;
   width: 60px;
   margin-left: -30px;
+  opacity: 0;
 `;
 
 export const ScrollMouse = styled.span`
@@ -106,26 +145,8 @@ export const ScrollMouse = styled.span`
     margin-left: -3px;
     background-color: #757575;
     border-radius: 100%;
-    -webkit-animation: sdb 2s infinite;
     animation: sdb 2s infinite;
     box-sizing: border-box;
-  }
-
-  @-webkit-keyframes sdb {
-    0% {
-      -webkit-transform: translate(0, 0);
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      -webkit-transform: translate(0, 20px);
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
   }
 
   @keyframes sdb {

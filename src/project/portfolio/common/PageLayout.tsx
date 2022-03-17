@@ -11,8 +11,8 @@ interface Props {
 const Title = styled.h2`
   position: relative;
   display: inline-block;
-  margin-bottom: 5vw;
-  font-size: 5.5vw;
+  margin-bottom: 70px;
+  font-size: 90px;
   &::before {
     content: "";
     position: absolute;
@@ -25,6 +25,11 @@ const Title = styled.h2`
     z-index: -1;
     transform: rotate(6deg);
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
 `;
 
 const Wrap = styled("div", {
@@ -36,11 +41,15 @@ const Wrap = styled("div", {
     type === "project"
       ? css`
           h2 {
-            margin: 0 2.5vw 5vw;
+            margin: 0 20px 40px;
+
+            @media (max-width: 768px) {
+              margin: 0 20px;
+            }
           }
         `
       : css`
-          padding: 0 2.5vw;
+          padding: 0 20px;
         `}
 `;
 

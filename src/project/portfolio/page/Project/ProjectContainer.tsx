@@ -86,7 +86,6 @@ export const ProjectContainer = () => {
   return (
     <PageLayout type="project" title="Project">
       <Swiper
-        slidesPerView={1}
         spaceBetween={10}
         centeredSlides={true}
         navigation={true}
@@ -104,7 +103,7 @@ export const ProjectContainer = () => {
             spaceBetween: 20,
           },
           500: {
-            slidesPerView: 1.8,
+            slidesPerView: 1.5,
             spaceBetween: 10,
           },
         }}

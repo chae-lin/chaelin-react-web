@@ -56,17 +56,19 @@ export const ProjectModalItem: FC<Props> = ({
       <S.OverViewArea>
         <S.AreaTitle>Overview</S.AreaTitle>
         <S.OverViewContent>
-          {modalData.overViewLink.map((link, index) => (
-            <S.OverViewButton
-              key={index}
-              overViewLink={link}
-              onClick={() =>
-                modalData.overViewLink ? window.open(link, "_blank") : null
-              }
-            >
-              {link ? "Visit Website" : "Visit Website  (preparing)"}
-            </S.OverViewButton>
-          ))}
+          <S.OverViewButtonBox>
+            {modalData.overViewLink.map((link, index) => (
+              <S.OverViewButton
+                key={index}
+                overViewLink={link}
+                onClick={() =>
+                  modalData.overViewLink ? window.open(link, "_blank") : null
+                }
+              >
+                {link ? "Visit Website" : "Visit Website  (preparing)"}
+              </S.OverViewButton>
+            ))}
+          </S.OverViewButtonBox>
           <img src={modalData.overViewImg} alt="overview" />
         </S.OverViewContent>
       </S.OverViewArea>

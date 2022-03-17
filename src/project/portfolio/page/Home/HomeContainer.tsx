@@ -1,12 +1,12 @@
 import { Scroll } from "./Scroll";
 import * as S from "./styles";
 
+import bg1 from "../../assets/images/bg_pattern1.png";
+import bg2 from "../../assets/images/bg_pattern2.png";
+
 export const HomeContainer = () => {
   return (
     <>
-      <S.BackgroundBox>
-        <S.BackgroundText>Hello Stranger</S.BackgroundText>
-      </S.BackgroundBox>
       <S.TitleBox>
         <strong>You will see more than</strong>
         <h1 className="home-title">
@@ -21,6 +21,9 @@ export const HomeContainer = () => {
           </svg>
         </h1>
       </S.TitleBox>
+      <S.BackgroundText>Hello Stranger</S.BackgroundText>
+      <S.BackgroundImage1 style={{ backgroundImage: `url(${bg1})` }} />
+      <S.BackgroundImage2 style={{ backgroundImage: `url(${bg2})` }} />
       <Scroll />
     </>
   );

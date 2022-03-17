@@ -55,8 +55,8 @@ export const ProjectImage = styled("div", {
 `;
 
 export const ProjectTitle = styled.h3`
-  padding: 0.6vw 1vw 0;
-  font-size: 1.6vw;
+  padding: 20px 10px 0;
+  font-size: 20px;
   line-height: 1.3;
   color: #dc5361;
   text-align: right;
@@ -66,8 +66,8 @@ export const ProjectTag = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  padding: 0 1vw;
-  font-size: 1.3vw;
+  padding: 4px 10px 0;
+  font-size: 16px;
   line-height: 1.3;
   color: #fff;
   text-align: right;
