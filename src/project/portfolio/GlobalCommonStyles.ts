@@ -171,7 +171,6 @@ const GlobalCommonStyle = css`
       display: flex;
       justify-content: flex-end;
       padding: 20px;
-      background-color: #1f2029;
       z-index: 5;
 
       .swiper-pagination-bullet {

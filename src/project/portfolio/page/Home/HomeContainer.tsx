@@ -1,10 +1,11 @@
-import { Scroll } from "./Scroll";
+import { FC } from "react";
+import { Scroll, ScrollPops } from "./Scroll";
 import * as S from "./styles";
 
 import bg1 from "../../assets/images/bg_pattern1.png";
 import bg2 from "../../assets/images/bg_pattern2.png";
 
-export const HomeContainer = () => {
+export const HomeContainer: FC<ScrollPops> = ({ handleScroll }) => {
   return (
     <>
       <S.TitleBox>
@@ -24,7 +25,7 @@ export const HomeContainer = () => {
       <S.BackgroundText>Hello Stranger</S.BackgroundText>
       <S.BackgroundImage1 style={{ backgroundImage: `url(${bg1})` }} />
       <S.BackgroundImage2 style={{ backgroundImage: `url(${bg2})` }} />
-      <Scroll />
+      <Scroll handleScroll={handleScroll} />
     </>
   );
 };

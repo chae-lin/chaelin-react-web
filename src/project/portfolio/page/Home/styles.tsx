@@ -123,6 +123,7 @@ export const ScrollWrap = styled.div`
   width: 60px;
   margin-left: -30px;
   opacity: 0;
+  cursor: pointer;
 `;
 
 export const ScrollMouse = styled.span`

@@ -10,7 +10,7 @@ export const SkillList = styled.div`
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 5.6vw;
+  gap: 4.6vw;
 
   @media (max-width: 768px) {
     gap: 12px;
@@ -19,7 +19,7 @@ export const SkillList = styled.div`
 
 export const ProgressBox = styled.div`
   position: relative;
-  width: 21vw;
+  width: 23vw;
 
   .path {
     stroke-dasharray: 1000;
@@ -59,12 +59,12 @@ export const Title = styled.h3`
 export const BarArea = styled.div`
   overflow: hidden;
   position: relative;
-  height: 20px;
+  height: 22px;
   border-radius: 16px;
   background-color: #3e404c;
 
   @media (max-width: 768px) {
-    height: 16px;
+    height: 14px;
   }
 `;
 
@@ -96,6 +96,7 @@ export const Percent = styled.span`
   opacity: 0;
 
   @media (max-width: 768px) {
+    top: 0;
     font-size: 12px;
   }
 `;

@@ -1,11 +1,12 @@
-import React from "react";
+import { useCallback, useRef } from "react";
 import { Global } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper";
+import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import GlobalCommonStyle from "./GlobalCommonStyles";
 import { Archiving, Home, Project, Skill } from "./page";
 
 const Portfolio = () => {
+  const swiperRef = useRef() as any;
   const pagiList = ["Home", "Skill", "Project", "Archiving"];
   const pagination = {
     clickable: true,
@@ -14,10 +15,17 @@ const Portfolio = () => {
     },
   };
 
+  const handleScroll = useCallback(() => {
+    swiperRef.current?.swiper.slideTo(1);
+  }, []);
+
   return (
     <>
       <Global styles={GlobalCommonStyle} />
       <Swiper
+        onInit={(core: SwiperCore) => {
+          swiperRef.current = core.el;
+        }}
         direction={"vertical"}
         slidesPerView={1}
         mousewheel={true}
@@ -26,7 +34,7 @@ const Portfolio = () => {
         className="swiper-portfolio"
       >
         <SwiperSlide>
-          <Home />
+          <Home handleScroll={handleScroll} />
         </SwiperSlide>
         <SwiperSlide>
           <Skill />
