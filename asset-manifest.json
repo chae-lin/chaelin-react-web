@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/chaelin-react-web/static/js/main.5b36c447.js",
-    "static/js/791.1539f639.chunk.js": "/chaelin-react-web/static/js/791.1539f639.chunk.js",
+    "main.js": "/chaelin-react-web/static/js/main.89cecae6.js",
+    "static/js/791.c4f0796d.chunk.js": "/chaelin-react-web/static/js/791.c4f0796d.chunk.js",
     "static/js/138.0e1b9ecd.chunk.js": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js",
     "static/js/795.076bd46f.chunk.js": "/chaelin-react-web/static/js/795.076bd46f.chunk.js",
     "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
@@ -27,17 +27,19 @@
     "static/media/bg_project_top2.jpg": "/chaelin-react-web/static/media/bg_project_top2.3a711c227435f7f2b0cc.jpg",
     "static/media/bg_project_top7.png": "/chaelin-react-web/static/media/bg_project_top7.687d8ee77edb824eea82.png",
     "static/media/logo-tistory.png": "/chaelin-react-web/static/media/logo-tistory.14d6c644a78566e280a9.png",
+    "static/media/bg_pattern2.png": "/chaelin-react-web/static/media/bg_pattern2.da8c8b043261958c43a2.png",
     "static/media/logo-github.png": "/chaelin-react-web/static/media/logo-github.6a9698194957b982ca6f.png",
     "static/media/bg_project_top1.png": "/chaelin-react-web/static/media/bg_project_top1.38533e0f6a25b8109bd1.png",
+    "static/media/bg_pattern1.png": "/chaelin-react-web/static/media/bg_pattern1.e762f17001da1e3a5b6c.png",
     "index.html": "/chaelin-react-web/index.html",
-    "main.5b36c447.js.map": "/chaelin-react-web/static/js/main.5b36c447.js.map",
-    "791.1539f639.chunk.js.map": "/chaelin-react-web/static/js/791.1539f639.chunk.js.map",
+    "main.89cecae6.js.map": "/chaelin-react-web/static/js/main.89cecae6.js.map",
+    "791.c4f0796d.chunk.js.map": "/chaelin-react-web/static/js/791.c4f0796d.chunk.js.map",
     "138.0e1b9ecd.chunk.js.map": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js.map",
     "795.076bd46f.chunk.js.map": "/chaelin-react-web/static/js/795.076bd46f.chunk.js.map",
     "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map",
     "579.f54f2ac4.chunk.js.map": "/chaelin-react-web/static/js/579.f54f2ac4.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5b36c447.js"
+    "static/js/main.89cecae6.js"
   ]
 }
