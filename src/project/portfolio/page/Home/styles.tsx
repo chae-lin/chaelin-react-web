@@ -1,9 +1,5 @@
 import styled from "@emotion/styled";
 
-export const Wrap = styled.div`
-  padding: 0 20px;
-`;
-
 export const BackgroundBox = styled.div`
   position: relative;
   z-index: -1;
@@ -19,10 +15,10 @@ export const BackgroundText = styled.span`
     rgba(90, 90, 90, 0) 20%,
     rgba(90, 90, 90, 0.15)
   );
-  font-size: 11vh;
-  font-weight: 900;
+  font-size: 12vh;
   line-height: 1;
   color: #45464e;
+  -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,15 +26,17 @@ export const BackgroundText = styled.span`
 
 export const TitleBox = styled.div`
   overflow: hidden;
+  padding: 0 20px;
+
   strong {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     font-size: 35px;
     line-height: 1;
     color: #dc5361;
   }
 
-  svg text {
+  text {
     font-family: "Black Han Sans", cursive;
     font-size: 100px;
     fill: transparent;
@@ -66,18 +64,16 @@ export const TitleBox = styled.div`
 
   @media (max-width: 768px) {
     strong {
-      margin-bottom: 0;
-      font-size: 6vw;
-      line-height: 1.5;
+      font-size: 4vw;
     }
 
     svg {
-      &:not(:first-of-type) {
-        margin-top: -5vw;
-      }
-      text {
-        font-size: 12vw;
-      }
+      width: 100%;
+      height: 16vw;
+    }
+
+    text {
+      font-size: 13vw;
     }
   }
 `;
@@ -154,6 +150,6 @@ export const ScrollText = styled.span`
   display: block;
   padding-bottom: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #757575;
 `;

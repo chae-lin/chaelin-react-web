@@ -128,6 +128,7 @@ const modalList = [
       {
         summaryTitle: "사이트 특징",
         summaryInfo: [
+          "라인프렌즈와 방탄소년단의 콜라보레이션 캐릭터 이벤트 웹사이트",
           "적응형 웹 사이트",
           "5개국어 대응 (한국어, 영어, 일본어, 간체, 번체)",
           "CSS Animation",

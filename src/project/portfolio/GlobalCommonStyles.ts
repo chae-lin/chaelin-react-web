@@ -172,17 +172,23 @@ const GlobalCommonStyle = css`
       top: 0;
       right: 0;
       display: flex;
-      padding: 2vw;
+      padding: 20px;
       z-index: 5;
 
       .swiper-pagination-bullet {
         position: relative;
-        margin-left: 0.8vw;
+        margin-right: 16px;
         padding: 0.5vw;
-        font-size: 1.4vw;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 24px;
         font-weight: 600;
         color: #757575;
         cursor: pointer;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
 
         &:after {
           content: "";
