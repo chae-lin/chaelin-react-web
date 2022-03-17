@@ -6,8 +6,9 @@ export const ModalWrap = styled.div`
   left: 0;
   top: 0;
   width: 100%;
+  min-width: 320px;
   min-height: 100%;
-  background-color: #fff;
+  background-color: #f1f1f1;
   word-break: keep-all;
   z-index: 10;
 
@@ -48,6 +49,7 @@ export const TopArea = styled.div`
   align-items: center;
   justify-content: center;
   height: 500px;
+  padding: 0 20px;
 
   img {
     position: absolute;
@@ -76,6 +78,7 @@ export const TopArea = styled.div`
 `;
 
 export const TopTitleBox = styled.div`
+  text-align: center;
   z-index: 5;
   h2 {
     padding-bottom: 20px;
@@ -95,6 +98,16 @@ export const TopTitleBox = styled.div`
     line-height: 1;
     color: #cfcfcf;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      padding-bottom: 10px;
+      font-size: 45px;
+    }
+    strong {
+      font-size: 22px;
+    }
+  }
 `;
 
 export const AreaTitle = styled.h3`
@@ -107,6 +120,7 @@ export const AreaTitle = styled.h3`
 
 export const SummartArea = styled.div`
   padding: 100px 20px;
+  background-color: #fff;
 
   dl {
     display: flex;
@@ -156,7 +170,6 @@ export const SummartBox = styled.div`
 
 export const OverViewArea = styled.div`
   padding: 100px 20px;
-  background-color: #f1f1f1;
 `;
 
 export const OverViewContent = styled.div`
