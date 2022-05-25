@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.js": "/chaelin-react-web/static/js/main.881c6ad6.js",
-    "static/js/791.80c62263.chunk.js": "/chaelin-react-web/static/js/791.80c62263.chunk.js",
+    "main.js": "/chaelin-react-web/static/js/main.922118a6.js",
+    "static/js/746.9814a682.chunk.js": "/chaelin-react-web/static/js/746.9814a682.chunk.js",
     "static/js/138.0e1b9ecd.chunk.js": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js",
     "static/js/795.076bd46f.chunk.js": "/chaelin-react-web/static/js/795.076bd46f.chunk.js",
     "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
-    "static/js/579.f54f2ac4.chunk.js": "/chaelin-react-web/static/js/579.f54f2ac4.chunk.js",
+    "static/js/579.961d3cfd.chunk.js": "/chaelin-react-web/static/js/579.961d3cfd.chunk.js",
     "static/media/img_project6.png": "/chaelin-react-web/static/media/img_project6.62f4cca7df0702a9569a.png",
     "static/media/img_project7.png": "/chaelin-react-web/static/media/img_project7.33b2139f5c535b397733.png",
     "static/media/img_project4.png": "/chaelin-react-web/static/media/img_project4.696f41c1146874656e49.png",
     "static/media/img_project5.png": "/chaelin-react-web/static/media/img_project5.056a507254140ea867fe.png",
     "static/media/bg_project_top4.png": "/chaelin-react-web/static/media/bg_project_top4.3b61ee2badf185cba2b7.png",
+    "static/media/img_project8.png": "/chaelin-react-web/static/media/img_project8.2ec85cbc78c269aa4e58.png",
     "static/media/bg_project_top5.jpg": "/chaelin-react-web/static/media/bg_project_top5.b0c8ba277f6b8f213ff8.jpg",
     "static/media/work4.jpg": "/chaelin-react-web/static/media/work4.4a9b15e44ee8537adca8.jpg",
+    "static/media/work6.jpg": "/chaelin-react-web/static/media/work6.6ff4925f0534770134f3.jpg",
     "static/media/img_project1_v2.png": "/chaelin-react-web/static/media/img_project1_v2.9813875da07eee100b5d.png",
     "static/media/img_project2.png": "/chaelin-react-web/static/media/img_project2.9dd6316324e7d74bcfb6.png",
     "static/media/work2.jpg": "/chaelin-react-web/static/media/work2.931be20ee8ec0e454821.jpg",
@@ -20,10 +22,11 @@
     "static/media/bg_project_top3.jpg": "/chaelin-react-web/static/media/bg_project_top3.6784e4ba43fc1566a8b0.jpg",
     "static/media/img_project3.png": "/chaelin-react-web/static/media/img_project3.e4b805e9555789a0166d.png",
     "static/media/work1_v2.jpg": "/chaelin-react-web/static/media/work1_v2.c0cc0d0b2a74b25e09e2.jpg",
-    "static/media/work7.jpg": "/chaelin-react-web/static/media/work7.46c5054daf78cbfdbca6.jpg",
-    "static/media/work8.jpg": "/chaelin-react-web/static/media/work8.84835beddb62d0270c1a.jpg",
+    "static/media/work8.png": "/chaelin-react-web/static/media/work8.fdfd99f2c478c3e67d19.png",
+    "static/media/work7.jpg": "/chaelin-react-web/static/media/work7.84835beddb62d0270c1a.jpg",
     "static/media/work3.png": "/chaelin-react-web/static/media/work3.46fbd124a0ad3da72a1a.png",
     "static/media/bg_project_top6.png": "/chaelin-react-web/static/media/bg_project_top6.52964a3c9257cfe4dd70.png",
+    "static/media/bg_project_top8.png": "/chaelin-react-web/static/media/bg_project_top8.b9795141d3cf452d1daf.png",
     "static/media/bg_project_top2.jpg": "/chaelin-react-web/static/media/bg_project_top2.3a711c227435f7f2b0cc.jpg",
     "static/media/bg_project_top7.png": "/chaelin-react-web/static/media/bg_project_top7.687d8ee77edb824eea82.png",
     "static/media/logo-tistory.png": "/chaelin-react-web/static/media/logo-tistory.14d6c644a78566e280a9.png",
@@ -32,14 +35,14 @@
     "static/media/bg_project_top1.png": "/chaelin-react-web/static/media/bg_project_top1.38533e0f6a25b8109bd1.png",
     "static/media/bg_pattern1.png": "/chaelin-react-web/static/media/bg_pattern1.e762f17001da1e3a5b6c.png",
     "index.html": "/chaelin-react-web/index.html",
-    "main.881c6ad6.js.map": "/chaelin-react-web/static/js/main.881c6ad6.js.map",
-    "791.80c62263.chunk.js.map": "/chaelin-react-web/static/js/791.80c62263.chunk.js.map",
+    "main.922118a6.js.map": "/chaelin-react-web/static/js/main.922118a6.js.map",
+    "746.9814a682.chunk.js.map": "/chaelin-react-web/static/js/746.9814a682.chunk.js.map",
     "138.0e1b9ecd.chunk.js.map": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js.map",
     "795.076bd46f.chunk.js.map": "/chaelin-react-web/static/js/795.076bd46f.chunk.js.map",
     "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map",
-    "579.f54f2ac4.chunk.js.map": "/chaelin-react-web/static/js/579.f54f2ac4.chunk.js.map"
+    "579.961d3cfd.chunk.js.map": "/chaelin-react-web/static/js/579.961d3cfd.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.881c6ad6.js"
+    "static/js/main.922118a6.js"
   ]
 }
