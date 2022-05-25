@@ -3,14 +3,14 @@ import styled from "@emotion/styled";
 
 export const ModalWrap = styled.div`
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   min-width: 320px;
   min-height: 100%;
   background-color: #f1f1f1;
   word-break: keep-all;
-  z-index: 10;
+  z-index: 100;
 
   &.open-modal {
     animation: slideUp 1s ease-in-out 0s 1 normal forwards;

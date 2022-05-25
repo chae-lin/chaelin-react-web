@@ -156,6 +156,10 @@ const GlobalCommonStyle = css`
     word-break: keep-all;
   }
 
+  #modal-root {
+    inset: 0px;
+  }
+
   .swiper-portfolio {
     touch-action: pan-x;
 
@@ -307,6 +311,7 @@ const GlobalCommonStyle = css`
     @media (max-width: 768px) {
       .swiper-button-prev,
       .swiper-button-next {
+        bottom: 20%;
         width: 30px;
         height: 30px;
         border-width: 0 0 4px 4px;

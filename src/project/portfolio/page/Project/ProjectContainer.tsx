@@ -5,52 +5,7 @@ import { PageLayout } from "../../common";
 import { ProjectItem } from "./ProjectItem";
 import { ProjectModalContainer as ProjectModal } from "./Modal/ProjectModalContainer";
 
-import imgWork1 from "../../assets/images/work1_v2.jpg";
-import imgWork2 from "../../assets/images/work2.jpg";
-import imgWork3 from "../../assets/images/work3.png";
-import imgWork4 from "../../assets/images/work4.jpg";
-import imgWork5 from "../../assets/images/work5.jpg";
-import imgWork7 from "../../assets/images/work7.jpg";
-import imgWork8 from "../../assets/images/work8.jpg";
-
-const projectList = [
-  {
-    imgUrl: imgWork8,
-    title: "JAM LIVE (LIVE)",
-    tags: ["#반응형", "#유동적 사이즈", "#sass"],
-  },
-  {
-    imgUrl: imgWork7,
-    title: "JAM LIVE (advertiser)",
-    tags: ["#반응형", "#유동적 사이즈", "#sass"],
-  },
-  {
-    imgUrl: imgWork1,
-    title: "GROWTHY BRAND",
-    tags: ["#반응형", "#다국어", "#sass"],
-  },
-  {
-    imgUrl: imgWork2,
-    title: "BT21 BABY, BT21 FESTIVAL2019",
-    tags: ["#적응형", "#5개언어", "#swiper", "#slick"],
-  },
-  {
-    imgUrl: imgWork3,
-    title: "SMART PLACE",
-    tags: ["#적응형", "sass", "#React", "#React Native", "#Component"],
-    bgColor: "#b8b8ba",
-  },
-  {
-    imgUrl: imgWork4,
-    title: "WORK PLACE",
-    tags: ["#적응형", "#sass", "#Foldable Phone", "#Component"],
-  },
-  {
-    imgUrl: imgWork5,
-    title: "DEVIEW2018",
-    tags: ["#반응형", "#다국어", "#sass", "#Interaction"],
-  },
-];
+import { ProjectStoreImpl } from "../../stores/ProjectStore";
 
 function useDelayUnmount(isMounted: boolean, delayTime: number) {
   const [shouldRender, setShouldRender] = useState(false);
@@ -109,17 +64,19 @@ export const ProjectContainer = () => {
         }}
         className="swiper-project"
       >
-        {projectList?.map(({ imgUrl, title, tags, bgColor }, index) => (
-          <SwiperSlide key={index}>
-            <ProjectItem
-              imgUrl={imgUrl}
-              bgColor={bgColor}
-              title={title}
-              tags={tags}
-              handleClick={() => handleClick(index)}
-            />
-          </SwiperSlide>
-        ))}
+        {ProjectStoreImpl.projectList?.map(
+          ({ imgUrl, title, tags, bgColor }, index) => (
+            <SwiperSlide key={index}>
+              <ProjectItem
+                imgUrl={imgUrl}
+                bgColor={bgColor}
+                title={title}
+                tags={tags}
+                handleClick={() => handleClick(index)}
+              />
+            </SwiperSlide>
+          )
+        )}
       </Swiper>
       {shouldRenderChild && (
         <ProjectModal
