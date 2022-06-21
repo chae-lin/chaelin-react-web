@@ -3,7 +3,7 @@ import imgWork2 from "../assets/images/work2.jpg";
 import imgWork3 from "../assets/images/work3.png";
 import imgWork4 from "../assets/images/work4.jpg";
 import imgWork5 from "../assets/images/work5.jpg";
-import imgWork6 from "../assets/images/work6.jpg";
+import imgWork6 from "../assets/images/work6.jpeg";
 import imgWork7 from "../assets/images/work7.jpg";
 import imgWork8 from "../assets/images/work8.png";
 
