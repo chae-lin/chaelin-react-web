@@ -35,9 +35,6 @@ const Portfolio = () => {
         className="swiper-portfolio"
       >
         <SwiperSlide>
-          <Link to="/page1" style={{ zIndex: 555 }}>
-            page1
-          </Link>
           <Home handleScroll={handleScroll} />
         </SwiperSlide>
         <SwiperSlide>
