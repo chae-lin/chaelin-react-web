@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import GlobalCommonStyle from "./GlobalCommonStyles";
 import { Archiving, Home, Project, Skill } from "./page";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const swiperRef = useRef() as any;
@@ -34,6 +35,9 @@ const Portfolio = () => {
         className="swiper-portfolio"
       >
         <SwiperSlide>
+          <Link to="/page1" style={{ zIndex: 555 }}>
+            page1
+          </Link>
           <Home handleScroll={handleScroll} />
         </SwiperSlide>
         <SwiperSlide>
