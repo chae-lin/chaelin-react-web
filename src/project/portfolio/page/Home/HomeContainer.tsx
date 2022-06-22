@@ -1,31 +1,52 @@
-import { FC } from "react";
-import { Scroll, ScrollPops } from "./Scroll";
+import { forwardRef } from "react";
+import { useScroll } from "../../hooks/useScroll";
+import { Scroll } from "./Scroll";
 import * as S from "./styles";
 
 import bg1 from "../../assets/images/bg_pattern1.png";
 import bg2 from "../../assets/images/bg_pattern2.png";
 
-export const HomeContainer: FC<ScrollPops> = ({ handleScroll }) => {
-  return (
-    <>
-      <S.TitleBox>
-        <strong>You will see more than</strong>
-        <h1 className="home-title">
-          <svg width="100%" height="130">
-            <text y="70%">whatever</text>
-          </svg>
-          <svg width="224" height="120">
-            <text y="70%">you</text>
-          </svg>
-          <svg width="450" height="120">
-            <text y="70%">imagine</text>
-          </svg>
-        </h1>
-      </S.TitleBox>
-      <S.BackgroundText>Hello Stranger</S.BackgroundText>
-      <S.BackgroundImage1 style={{ backgroundImage: `url(${bg1})` }} />
-      <S.BackgroundImage2 style={{ backgroundImage: `url(${bg2})` }} />
-      <Scroll handleScroll={handleScroll} />
-    </>
-  );
-};
+interface Props {
+  handleScroll: (e: React.MouseEvent<HTMLElement>) => unknown;
+}
+
+export const HomeContainer = forwardRef<HTMLDivElement, Props>(
+  ({ handleScroll }, ref) => {
+    const scrollY = useScroll().scrollY;
+
+    window.addEventListener("scroll", () => {
+      //
+      // var secPos0 = $(".spot").offset().top;
+      // var secPos1 = $(".work").offset().top;
+      // var secPos2 = $(".capability").offset().top - 200;
+      // var secPos3 = $(".contact").offset().top - 200;
+      // // spot Parallax
+    });
+
+    return (
+      <S.HomeWrap ref={ref}>
+        <S.TitleBox style={{ opacity: 1 - scrollY / 500 }}>
+          <h1>
+            I <S.DBox>d</S.DBox>
+            <S.OBox>o</S.OBox> <b>everything</b> you want.
+          </h1>
+        </S.TitleBox>
+        <S.BackgroundText style={{ top: scrollY / -2 + "px" }}>
+          Hello Stranger
+        </S.BackgroundText>
+        <S.BackgroundImage
+          style={{ backgroundImage: `url(${bg1})`, top: scrollY / -3.5 + "px" }}
+        />
+        <S.BackgroundImage
+          style={{ backgroundImage: `url(${bg2})`, top: scrollY / -2.8 + "px" }}
+        />
+        <Scroll
+          handleScroll={handleScroll}
+          style={{ opacity: 1 - scrollY / 300 }}
+        />
+      </S.HomeWrap>
+    );
+  }
+);
+
+HomeContainer.displayName = "HomeContainer";

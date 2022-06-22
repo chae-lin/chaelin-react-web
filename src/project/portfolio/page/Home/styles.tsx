@@ -1,7 +1,97 @@
+import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
+const rotate1 = keyframes`
+  0% {
+    transform: rotate( 90deg );
+  }
+  70% {
+    transform: rotate( 90deg );
+  }
+  100% {
+    transform: rotate( 720deg );
+  }
+`;
+
+const rotate2 = keyframes`
+  100% {
+    transform: rotate( 720deg );
+  }
+`;
+
+const doRotation = keyframes`
+  0% {
+    transform: translateX(-50%) rotate( 0deg );
+  }
+  100% {
+    transform: translateX(-50%) rotate( 360deg );
+  }
+`;
+
+const BlinkEffect = keyframes`
+  40% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  47% {
+    opacity: 1;
+  }
+`;
+
+const ScrollDown = keyframes`
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 3vw);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
+export const HomeWrap = styled.section`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+export const TitleBox = styled.div`
+  overflow: hidden;
+  position: relative;
+  margin-top: -13vh;
+  text-align: center;
+  z-index: 5;
+
+  h1 {
+    font-size: 9vw;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  b {
+    display: block;
+    font-size: 10vw;
+    color: #dc5361;
+    animation: ${BlinkEffect} 3s step-end infinite;
+  }
+`;
+
 export const BackgroundText = styled.span`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding-top: 2vh;
@@ -10,168 +100,129 @@ export const BackgroundText = styled.span`
     rgba(90, 90, 90, 0) 20%,
     rgba(90, 90, 90, 0.15)
   );
-  font-size: 12vh;
+  font-size: 9vw;
   line-height: 1;
   color: #45464e;
+  white-space: nowrap;
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
 
-export const BackgroundImage1 = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: 50%;
-  background-size: cover;
-  animation: cloud1 3s infinite linear;
-
-  @keyframes cloud1 {
-    0%,
-    100% {
-      transform: translate(-3%, -4%);
-    }
-    50% {
-      transform: translate(-4%, -3%);
-    }
-  }
-`;
-
-export const BackgroundImage2 = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: 50%;
-  background-size: cover;
-  animation: cloud2 3s infinite linear;
-
-  @keyframes cloud2 {
-    0%,
-    100% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(1%, 1%);
-    }
-  }
-`;
-
-export const TitleBox = styled.div`
-  overflow: hidden;
-  padding: 0 20px;
+export const DBox = styled.span`
+  position: relative;
   z-index: 5;
+`;
 
-  strong {
-    display: block;
-    margin-bottom: 12px;
-    font-size: 35px;
-    line-height: 1;
-    color: #dc5361;
+export const OBox = styled.span`
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    padding-top: 120%;
+    padding-left: 120%;
+    border-radius: 50%;
+    border: 0.5vw dashed #dc5361;
+    animation: ${doRotation} 3s linear infinite;
   }
+`;
 
-  text {
-    font-family: "Black Han Sans", cursive;
-    font-size: 100px;
-    fill: transparent;
-    stroke-dasharray: 326px;
-
-    @keyframes stroke {
-      0% {
-        stroke: #fff;
-        stroke-width: 3px;
-        stroke-dashoffset: 326px;
+export const Figure = styled.span<{
+  name?: string;
+  position: { top?: number; left?: number; right?: number; bottom?: number };
+  type?: "type1" | "type2";
+}>`
+  position: absolute;
+  ${
+    ({ name, position, type }) => {
+      for (const direction in position) {
+        return css`
+          ${direction}: position[direction];
+        `;
       }
-      70% {
-        fill: transparent;
-      }
-      98% {
-        stroke: #fff;
-        stroke-width: 3px;
-      }
-      100% {
-        fill: #fff;
-        stroke-dashoffset: 0px;
-      }
-    }
-  }
 
-  @media (max-width: 768px) {
-    strong {
-      font-size: 4vw;
+      name === "Cross"
+        ? css`
+            &:after {
+              display: inline-block;
+              content: "\00d7";
+              font-size: 15pt;
+            }
+          `
+        : css`
+            border: 1px solid red;
+            border-radius: 50%;
+          `;
     }
-
-    svg {
-      width: 100%;
-      height: 16vw;
-    }
-
-    text {
-      font-size: 13vw;
-    }
-  }
+    // css`
+    //   top: ${position?.top};
+    //   left: ${position?.left};
+    //   right: ${position?.right};
+    //   bottom: ${position?.bottom};
+    // `
+  };
 `;
 
 export const ScrollWrap = styled.div`
   position: absolute;
   bottom: 2%;
   left: 50%;
-  width: 60px;
-  margin-left: -30px;
-  opacity: 0;
+  transform: translateX(-50%);
   cursor: pointer;
 `;
 
 export const ScrollMouse = styled.span`
   display: block;
   position: relative;
-  width: 30px;
-  height: 50px;
+  width: 4vw;
+  max-width: 34px;
+  height: 6.6vw;
+  max-height: 56px;
   margin: 0 auto;
   border: 2px solid #757575;
-  border-radius: 50px;
+  border-radius: 2vw;
   box-sizing: border-box;
 
   &:before {
     position: absolute;
-    top: 10px;
+    top: 1vw;
     left: 50%;
     content: "";
-    width: 6px;
-    height: 6px;
-    margin-left: -3px;
+    width: 0.8vw;
+    max-width: 7px;
+    height: 0.8vw;
+    max-height: 7px;
     background-color: #757575;
     border-radius: 100%;
-    animation: sdb 2s infinite;
+    animation: ${ScrollDown} 2s infinite;
     box-sizing: border-box;
-  }
-
-  @keyframes sdb {
-    0% {
-      transform: translate(0, 0);
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      transform: translate(0, 20px);
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
   }
 `;
 
 export const ScrollText = styled.span`
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 1.4vw;
   text-align: center;
-  font-size: 12px;
+  font-size: clamp(10px, 1.6vw, 20px);
   color: #757575;
+`;
+
+export const BackgroundImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  height: 100%;
+  background-position: 50%;
+  opacity: 0.4;
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    background-position: 10%;
+  }
 `;

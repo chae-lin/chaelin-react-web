@@ -7,7 +7,7 @@ import imgWork6 from "../assets/images/work6.jpeg";
 import imgWork7 from "../assets/images/work7.jpg";
 import imgWork8 from "../assets/images/work8.png";
 
-export class ProjectStore {
+class ProjectStore {
   projectList = [
     {
       imgUrl: imgWork8,

@@ -17,7 +17,7 @@ export const ProjectItem: FC<Props> = ({
   handleClick,
 }) => {
   return (
-    <S.ProjectWrap onClick={handleClick}>
+    <S.ProjectWrap className="propject-item" onClick={handleClick}>
       <S.ProjectImage bgColor={bgColor}>
         <img src={imgUrl} alt={title} />
       </S.ProjectImage>

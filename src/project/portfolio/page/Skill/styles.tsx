@@ -1,8 +1,5 @@
 import styled from "@emotion/styled";
-
-export const Wrap = styled.div`
-  padding: 0 20px;
-`;
+import { SetionWrap } from "../../common";
 
 export const SkillList = styled.div`
   display: flex;
@@ -11,30 +8,11 @@ export const SkillList = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   gap: 4.6vw;
-
-  @media (max-width: 768px) {
-    gap: 12px;
-  }
 `;
 
 export const ProgressBox = styled.div`
   position: relative;
   width: 23vw;
-
-  .path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 5s linear alternate infinite;
-  }
-
-  @keyframes dash {
-    from {
-      stroke-dashoffset: 822;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
 
   @media (max-width: 768px) {
     width: 146px;
@@ -46,25 +24,22 @@ export const ProgressBox = styled.div`
 `;
 
 export const Title = styled.h3`
-  margin-bottom: 24px;
-  font-size: 26px;
-  color: #fff;
-
-  @media (max-width: 768px) {
-    margin-bottom: 12px;
-    font-size: 18px;
-  }
+  margin-bottom: 2vw;
+  font-size: clamp(12px, 3vw, 40px);
+  color: #d9d9d9;
 `;
 
 export const BarArea = styled.div`
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
   height: 22px;
   border-radius: 16px;
   background-color: #3e404c;
 
   @media (max-width: 768px) {
-    height: 14px;
+    height: 16px;
   }
 `;
 
@@ -88,7 +63,6 @@ export const Bar = styled.span`
 
 export const Percent = styled.span`
   position: absolute;
-  top: 2px;
   left: 0;
   margin-left: 10px;
   font-size: 15px;
@@ -96,19 +70,28 @@ export const Percent = styled.span`
   opacity: 0;
 
   @media (max-width: 768px) {
-    top: 0;
     font-size: 12px;
   }
 `;
 
 export const Text = styled.p`
-  margin-top: 6px;
-  font-size: 14px;
+  margin-top: 1.2vw;
+  font-size: clamp(10px, 1.4vw, 20px);
   line-height: 1.4;
   font-weight: 300;
   color: #8f8f8f;
+`;
 
-  @media (max-width: 768px) {
-    font-size: 10px;
+export const Warp = styled(SetionWrap)`
+  &.show {
+    .progress-bar {
+      width: 100%;
+      transition: width cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.7s;
+    }
+    .progress-percent {
+      opacity: 1;
+      transition: opacity cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
+      transition-delay: 0.5s;
+    }
   }
 `;

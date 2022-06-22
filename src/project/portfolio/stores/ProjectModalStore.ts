@@ -16,7 +16,7 @@ import overView3 from "../assets/images/img_project3.png";
 import overView2 from "../assets/images/img_project2.png";
 import overView1 from "../assets/images/img_project1_v2.png";
 
-export class ProjectModalStore {
+class ProjectModalStore {
   projectModalList = [
     {
       bgImg: top8,

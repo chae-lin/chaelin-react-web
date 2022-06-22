@@ -1,52 +1,65 @@
-import { useCallback, useRef } from "react";
+import { useState } from "react";
 import { Global } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Mousewheel, Pagination } from "swiper";
-import GlobalCommonStyle from "./GlobalCommonStyles";
+import GlobalStyle from "./GlobalStyle";
 import { Archiving, Home, Project, Skill } from "./page";
-import { Link } from "react-router-dom";
+import styled from "@emotion/styled";
+import { Header, Nave } from "./common";
+import { useScrollRef } from "./hooks/useScrollRef";
+
+const Wrap = styled.main`
+  padding: 0 20px 16vw;
+  color: #fff;
+`;
 
 const Portfolio = () => {
-  const swiperRef = useRef() as any;
-  const pagiList = ["Home", "Skill", "Project", "Archiving"];
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + pagiList[index] + "</span>";
-    },
+  const [currentSection, setCurrentSection] = useState("Home");
+
+  const [homeRef] = useScrollRef(setCurrentSection, "Home");
+  const [skillRef] = useScrollRef(setCurrentSection, "Skill");
+  const [propjectRef] = useScrollRef(setCurrentSection, "Project");
+  const [archivingRef] = useScrollRef(setCurrentSection, "Archiving");
+
+  const handleClickNave = (id: string) => {
+    switch (id) {
+      case "Home":
+        homeRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Skill":
+        skillRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Project":
+        propjectRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "Archiving":
+        archivingRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+    }
   };
 
-  const handleScroll = useCallback(() => {
-    swiperRef.current?.swiper.slideTo(1);
-  }, []);
+  const handleScroll = () => {
+    skillRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
-      <Global styles={GlobalCommonStyle} />
-      <Swiper
-        onInit={(core: SwiperCore) => {
-          swiperRef.current = core.el;
-        }}
-        direction={"vertical"}
-        slidesPerView={1}
-        mousewheel={true}
-        pagination={pagination}
-        modules={[Mousewheel, Pagination]}
-        className="swiper-portfolio"
-      >
-        <SwiperSlide>
-          <Home handleScroll={handleScroll} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Skill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Project />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Archiving />
-        </SwiperSlide>
-      </Swiper>
+      <Global styles={GlobalStyle()} />
+      <Header />
+      <Nave pposition={currentSection} onClick={handleClickNave} />
+      <Wrap>
+        <Home ref={homeRef} handleScroll={handleScroll} />
+        <Skill
+          ref={skillRef}
+          className={currentSection === "Skill" ? "show" : undefined}
+        />
+        <Project
+          ref={propjectRef}
+          className={currentSection === "Project" ? "show" : undefined}
+        />
+        <Archiving
+          ref={archivingRef}
+          className={currentSection === "Archiving" ? "show" : undefined}
+        />
+      </Wrap>
     </>
   );
 };

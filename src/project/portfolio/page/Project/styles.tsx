@@ -1,9 +1,29 @@
 import styled from "@emotion/styled";
+import { SetionWrap } from "../../common";
+
+export const ProjectList = styled.ul`
+  display: flex;
+  max-width: 80vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 4vw;
+
+  @media (max-width: 768px) {
+    max-width: 70vw;
+    gap: 8vw;
+  }
+`;
 
 export const ProjectWrap = styled.div`
   cursor: pointer;
+  flex-basis: calc(50% - 2vw);
   opacity: 0.6;
   transition: opacity ease-in-out 0.1s;
+
+  &:nth-child(2n) {
+    transform: translateY(-14%);
+  }
+
   &:hover {
     opacity: 1;
     animation: blink 1s ease-in-out infinite alternate;
@@ -28,6 +48,10 @@ export const ProjectWrap = styled.div`
         transform: translateY(0);
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
   }
 `;
 
@@ -55,23 +79,37 @@ export const ProjectImage = styled("div", {
 `;
 
 export const ProjectTitle = styled.h3`
-  padding: 20px 10px 0;
-  font-size: 20px;
+  padding: 1.2vw 1vw 0;
+  font-size: 2vw;
   line-height: 1.3;
   color: #dc5361;
   text-align: right;
+
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 
 export const ProjectTag = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  padding: 4px 10px 0;
-  font-size: 16px;
+  padding: 0.3vw 1vw 0;
+  font-size: 1.3vw;
   line-height: 1.3;
   color: #fff;
   text-align: right;
   span + span {
     margin-left: 0.6vw;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.6vw 1vw 0;
+    font-size: 2.3vw;
+  }
+`;
+
+export const Warp = styled(SetionWrap)`
+  &.show {
   }
 `;

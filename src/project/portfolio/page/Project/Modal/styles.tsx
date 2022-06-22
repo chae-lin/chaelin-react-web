@@ -2,12 +2,13 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const ModalWrap = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
   min-width: 320px;
-  min-height: 100%;
   background-color: #f1f1f1;
   word-break: keep-all;
   z-index: 100;
@@ -39,6 +40,61 @@ export const ModalWrap = styled.div`
     to {
       opacity: 0;
       transform: translateY(+100%);
+    }
+  }
+
+  .swiper-modal {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+
+    .swiper-wrapper {
+      display: flex;
+      box-sizing: content-box;
+    }
+
+    .swiper-slide {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      bottom: 30%;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: solid #757575;
+      border-width: 0 0 5px 5px;
+      outline: none;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .swiper-button-prev,
+      .swiper-button-next {
+        bottom: 20%;
+        width: 30px;
+        height: 30px;
+        border-width: 0 0 4px 4px;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+      transform: rotate(45deg);
+    }
+
+    .swiper-button-next {
+      right: 20px;
+      transform: rotate(-135deg);
+    }
+
+    .swiper-button-disabled {
+      opacity: 0.2;
+      cursor: auto;
     }
   }
 `;
