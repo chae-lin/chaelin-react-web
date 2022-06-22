@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.js": "/chaelin-react-web/static/js/main.d48d79a6.js",
-    "static/js/682.108c5c14.chunk.js": "/chaelin-react-web/static/js/682.108c5c14.chunk.js",
-    "static/js/128.0c606be0.chunk.js": "/chaelin-react-web/static/js/128.0c606be0.chunk.js",
+    "main.js": "/chaelin-react-web/static/js/main.3bb92e78.js",
+    "static/js/557.15938a8c.chunk.js": "/chaelin-react-web/static/js/557.15938a8c.chunk.js",
+    "static/js/173.ae322906.chunk.js": "/chaelin-react-web/static/js/173.ae322906.chunk.js",
     "static/js/138.0e1b9ecd.chunk.js": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js",
     "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
-    "static/js/579.38f4e183.chunk.js": "/chaelin-react-web/static/js/579.38f4e183.chunk.js",
-    "static/js/906.4398268d.chunk.js": "/chaelin-react-web/static/js/906.4398268d.chunk.js",
+    "static/js/579.9e3ab84b.chunk.js": "/chaelin-react-web/static/js/579.9e3ab84b.chunk.js",
     "static/media/img_project6.png": "/chaelin-react-web/static/media/img_project6.62f4cca7df0702a9569a.png",
     "static/media/img_project7.png": "/chaelin-react-web/static/media/img_project7.33b2139f5c535b397733.png",
     "static/media/img_project4.png": "/chaelin-react-web/static/media/img_project4.696f41c1146874656e49.png",
@@ -26,8 +25,8 @@
     "static/media/work6.jpeg": "/chaelin-react-web/static/media/work6.46c5054daf78cbfdbca6.jpeg",
     "static/media/work7.jpg": "/chaelin-react-web/static/media/work7.84835beddb62d0270c1a.jpg",
     "static/media/work3.png": "/chaelin-react-web/static/media/work3.46fbd124a0ad3da72a1a.png",
-    "static/media/bg_pattern1.png": "/chaelin-react-web/static/media/bg_pattern1.e762f17001da1e3a5b6c.png",
-    "static/media/bg_pattern2.png": "/chaelin-react-web/static/media/bg_pattern2.da8c8b043261958c43a2.png",
+    "static/media/bg_pattern1.png": "/chaelin-react-web/static/media/bg_pattern1.5bbe8add43b8218d82bf.png",
+    "static/media/bg_pattern2.png": "/chaelin-react-web/static/media/bg_pattern2.6d92d656eee029437568.png",
     "static/media/bg_project_top6.png": "/chaelin-react-web/static/media/bg_project_top6.52964a3c9257cfe4dd70.png",
     "static/media/bg_project_top8.png": "/chaelin-react-web/static/media/bg_project_top8.b9795141d3cf452d1daf.png",
     "static/media/bg_project_top2.jpg": "/chaelin-react-web/static/media/bg_project_top2.3a711c227435f7f2b0cc.jpg",
@@ -36,15 +35,14 @@
     "static/media/logo-github.png": "/chaelin-react-web/static/media/logo-github.6a9698194957b982ca6f.png",
     "static/media/bg_project_top1.png": "/chaelin-react-web/static/media/bg_project_top1.38533e0f6a25b8109bd1.png",
     "index.html": "/chaelin-react-web/index.html",
-    "main.d48d79a6.js.map": "/chaelin-react-web/static/js/main.d48d79a6.js.map",
-    "682.108c5c14.chunk.js.map": "/chaelin-react-web/static/js/682.108c5c14.chunk.js.map",
-    "128.0c606be0.chunk.js.map": "/chaelin-react-web/static/js/128.0c606be0.chunk.js.map",
+    "main.3bb92e78.js.map": "/chaelin-react-web/static/js/main.3bb92e78.js.map",
+    "557.15938a8c.chunk.js.map": "/chaelin-react-web/static/js/557.15938a8c.chunk.js.map",
+    "173.ae322906.chunk.js.map": "/chaelin-react-web/static/js/173.ae322906.chunk.js.map",
     "138.0e1b9ecd.chunk.js.map": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js.map",
     "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map",
-    "579.38f4e183.chunk.js.map": "/chaelin-react-web/static/js/579.38f4e183.chunk.js.map",
-    "906.4398268d.chunk.js.map": "/chaelin-react-web/static/js/906.4398268d.chunk.js.map"
+    "579.9e3ab84b.chunk.js.map": "/chaelin-react-web/static/js/579.9e3ab84b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d48d79a6.js"
+    "static/js/main.3bb92e78.js"
   ]
 }
