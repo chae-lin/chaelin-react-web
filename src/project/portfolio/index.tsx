@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Global } from "@emotion/react";
 import GlobalStyle from "./GlobalStyle";
 import { Archiving, Home, Project, Skill } from "./page";
@@ -19,26 +19,29 @@ const Portfolio = () => {
   const [propjectRef] = useScrollRef(setCurrentSection, "Project");
   const [archivingRef] = useScrollRef(setCurrentSection, "Archiving");
 
-  const handleClickNave = (id: string) => {
-    switch (id) {
-      case "Home":
-        homeRef.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "Skill":
-        skillRef.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "Project":
-        propjectRef.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "Archiving":
-        archivingRef.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-    }
-  };
+  const handleClickNave = useCallback(
+    (id: string) => {
+      switch (id) {
+        case "Home":
+          homeRef.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Skill":
+          skillRef.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Project":
+          propjectRef.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "Archiving":
+          archivingRef.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+      }
+    },
+    [archivingRef, homeRef, propjectRef, skillRef]
+  );
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     skillRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, [skillRef]);
 
   return (
     <>

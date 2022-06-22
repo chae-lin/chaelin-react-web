@@ -9,9 +9,9 @@ const Toy2 = loadable(() => import("./project/toy2"));
 const App = (): JSX.Element => {
   return (
     <Routes>
-      <Route path="/" element={<Portfolio />} />
-      <Route path="/main" element={<Toy1 />} />
-      {/* <Route path="/page2" element={<Toy2 />} /> */}
+      <Route path="" element={<Portfolio />} />
+      <Route path="/page1" element={<Toy1 />} />
+      <Route path="/page2" element={<Toy2 />} />
     </Routes>
   );
 };
