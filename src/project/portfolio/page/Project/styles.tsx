@@ -21,7 +21,7 @@ export const ProjectWrap = styled.div`
   transition: opacity ease-in-out 0.1s;
 
   &:nth-child(2n) {
-    transform: translateY(-14%);
+    margin-top: -6%;
   }
 
   &:hover {
