@@ -7,7 +7,7 @@ export const SkillList = styled.div`
   justify-content: center;
   width: max(84vw, 300px);
   margin: 0 auto;
-  gap: 4.6vw;
+  gap: max(4vw, 24px);
 `;
 
 export const ProgressBox = styled.div`
@@ -26,7 +26,7 @@ export const BarArea = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  height: clamp(14px, 1vw, 26px);
+  height: clamp(12px, 1.4vw, 26px);
   border-radius: 2vw;
   background-color: #3e404c;
 `;

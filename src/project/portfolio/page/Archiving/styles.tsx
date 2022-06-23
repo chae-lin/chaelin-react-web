@@ -5,11 +5,12 @@ export const ArchiveList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 6vw;
 `;
 
 export const ArchiveItemWrap = styled.div`
-  flex-basis: 40vw;
-  margin: 0 2vw;
+  flex-basis: 36vw;
+  max-width: 700px;
   padding: 4vw;
   border-radius: 9vw 1.8vw;
   background-color: #fff;
@@ -20,9 +21,7 @@ export const ArchiveItemWrap = styled.div`
 
   @media (max-width: 768px) {
     flex-basis: 70vw;
-    & + & {
-      margin-top: 6vw;
-    }
+    padding: 5vw;
   }
 `;
 
