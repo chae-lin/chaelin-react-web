@@ -9,9 +9,8 @@ export const ArchiveList = styled.div`
 `;
 
 export const ArchiveItemWrap = styled.div`
-  flex-basis: 36vw;
-  max-width: 620px;
-  padding: 3vw;
+  flex-basis: min(36vw, 560px);
+  padding: min(3vw, 44px);
   border-radius: 8vw 1vw;
   background-color: #fff;
   box-shadow: 0.4vw 0.4vw 0.8vw 0.4vw #5c5c5c;
