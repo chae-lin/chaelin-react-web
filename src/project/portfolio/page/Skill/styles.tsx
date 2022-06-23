@@ -5,14 +5,14 @@ export const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: max(84vw, 300px);
+  width: clamp(300px, 84vw, 1780px);
   margin: 0 auto;
   gap: max(4vw, 24px);
 `;
 
 export const ProgressBox = styled.div`
   position: relative;
-  width: clamp(138px, 22vw, 420px);
+  width: clamp(138px, 20vw, 420px);
 `;
 
 export const Title = styled.h3`
@@ -66,7 +66,7 @@ export const Percent = styled.span`
 
 export const Text = styled.p`
   margin-top: 1.2vw;
-  font-size: clamp(10px, 1.4vw, 20px);
+  font-size: clamp(10px, 1.3vw, 20px);
   line-height: 1.4;
   font-weight: 300;
   color: #8f8f8f;

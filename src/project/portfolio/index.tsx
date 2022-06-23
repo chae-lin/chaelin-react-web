@@ -5,9 +5,10 @@ import { Archiving, Home, Project, Skill } from "./page";
 import styled from "@emotion/styled";
 import { Header, Nave } from "./common";
 import { useScrollRef } from "./hooks/useScrollRef";
+import { useScroll } from "./hooks/useScroll";
 
 const Wrap = styled.main`
-  padding: 0 20px 16vw;
+  padding: 0 20px 14vw;
   color: #fff;
 `;
 
@@ -18,6 +19,14 @@ const Portfolio = () => {
   const [skillRef] = useScrollRef(setCurrentSection, "Skill");
   const [propjectRef] = useScrollRef(setCurrentSection, "Project");
   const [archivingRef] = useScrollRef(setCurrentSection, "Archiving");
+
+  const scrollY = useScroll().scrollY;
+
+  let skillY = skillRef.current?.offsetTop;
+  let propjectY = propjectRef.current?.offsetTop;
+  let archivingY = archivingRef.current?.offsetTop;
+
+  console.log(skillY);
 
   const handleClickNave = useCallback(
     (id: string) => {
@@ -52,15 +61,19 @@ const Portfolio = () => {
         <Home ref={homeRef} handleScroll={handleScroll} />
         <Skill
           ref={skillRef}
-          className={currentSection === "Skill" ? "show" : undefined}
+          className={!!skillY && scrollY >= skillY - 200 ? "show" : undefined}
         />
         <Project
           ref={propjectRef}
-          className={currentSection === "Project" ? "show" : undefined}
+          className={
+            !!propjectY && scrollY >= propjectY - 200 ? "show" : undefined
+          }
         />
         <Archiving
           ref={archivingRef}
-          className={currentSection === "Archiving" ? "show" : undefined}
+          className={
+            !!archivingY && scrollY >= archivingY - 200 ? "show" : undefined
+          }
         />
       </Wrap>
     </>

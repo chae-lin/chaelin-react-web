@@ -5,7 +5,7 @@ export const ArchiveList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10vw;
+  gap: 8vw;
 `;
 
 export const ArchiveItemWrap = styled.div`
@@ -17,6 +17,10 @@ export const ArchiveItemWrap = styled.div`
   opacity: 0;
   transform: translateY(30px);
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    border-radius: 14vw 1.8vw;
+  }
 `;
 
 export const ProjectImage = styled.h3`
@@ -30,7 +34,7 @@ export const ProjectImage = styled.h3`
 export const ItemText = styled.button`
   overflow: hidden;
   position: relative;
-  padding: clamp(8px, 1vw, 84px);
+  padding: clamp(8px, 0.6vw, 84px);
   font-size: clamp(12px, 1.6vw, 38px);
   font-weight: 800;
   color: #fff;
