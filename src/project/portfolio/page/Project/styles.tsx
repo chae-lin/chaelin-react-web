@@ -3,7 +3,7 @@ import { SetionWrap } from "../../common";
 
 export const ProjectList = styled.ul`
   display: flex;
-  width: max(70vw, 300px);
+  width: clamp(300px, 60vw, 1780px);
   margin: 0 auto;
   flex-wrap: wrap;
   gap: 6vw 4vw;

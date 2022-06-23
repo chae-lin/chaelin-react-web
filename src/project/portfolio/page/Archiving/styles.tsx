@@ -9,8 +9,8 @@ export const ArchiveList = styled.div`
 `;
 
 export const ArchiveItemWrap = styled.div`
-  flex-basis: clamp(350px, 28vw, 860px);
-  padding: clamp(26px, 3vw, 84px);
+  flex-basis: clamp(350px, 28vw, 820px);
+  padding: clamp(26px, 3vw, 82px);
   border-radius: 8vw 1vw;
   background-color: #fff;
   box-shadow: 0.4vw 0.4vw 0.8vw 0.4vw #5c5c5c;
@@ -21,7 +21,7 @@ export const ArchiveItemWrap = styled.div`
 
 export const ProjectImage = styled.h3`
   height: clamp(46px, 4vw, 130px);
-  margin-bottom: clamp(6px, 1.2vw, 20px);
+  margin-bottom: clamp(6px, 1.2vw, 38px);
   img {
     height: 100%;
   }
@@ -30,12 +30,12 @@ export const ProjectImage = styled.h3`
 export const ItemText = styled.button`
   overflow: hidden;
   position: relative;
-  padding: clamp(14px, 1vw, 84px);
-  font-size: clamp(8px, 1.4vw, 20px);
+  padding: clamp(8px, 1vw, 84px);
+  font-size: clamp(12px, 1.6vw, 38px);
   font-weight: 800;
   color: #fff;
   border: none;
-  border-radius: 0.5vw;
+  border-radius: clamp(8px, 0.5vw, 20px);
   background-color: #1d1d1d;
   box-shadow: 0.3vw 0.5vw 0.5vw 0 rgb(3 6 26 / 15%);
   transition: 0.5s all ease-in-out;
@@ -87,15 +87,15 @@ export const ItemText = styled.button`
 `;
 
 export const ItemInfoList = styled.ul`
-  margin-top: clamp(8px, 1.2vw, 20px);
+  margin-top: clamp(8px, 1.2vw, 38px);
 `;
 
 export const ItemInfo = styled.li`
   display: inline-flex;
   width: 100%;
-  margin-top: clamp(8px, 0.4vw, 20px);
+  margin-top: clamp(8px, 0.4vw, 14px);
   align-items: center;
-  font-size: clamp(13px, 1vw, 44px);
+  font-size: clamp(13px, 1.1vw, 28px);
   line-height: 1.2;
   color: #5c5c5c;
 
