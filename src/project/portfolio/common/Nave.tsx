@@ -40,7 +40,7 @@ const Wrap = styled.nav`
       color: #fff;
       transition: color 0.5s ease;
       &::before {
-        height: 1.4vw;
+        height: 46%;
         transition: height 0.7s ease;
       }
     }

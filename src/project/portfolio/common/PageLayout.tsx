@@ -9,8 +9,8 @@ export const SetionWrap = styled.section`
 export const SetionTitle = styled.h2`
   position: relative;
   display: inline-block;
-  margin-bottom: 6.4vw;
-  font-size: clamp(42px, 5vw, 100px);
+  margin-bottom: clamp(60px, 12vw, 400px);
+  font-size: clamp(46px, 6vw, 140px);
   z-index: 0;
 
   &::before {

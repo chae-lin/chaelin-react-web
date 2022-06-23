@@ -45,14 +45,14 @@ const BlinkEffect = keyframes`
 
 const ScrollDown = keyframes`
   0% {
-    transform: translate(-50%, 0);
+    top: 16%;
     opacity: 0;
   }
   40% {
     opacity: 1;
   }
   80% {
-    transform: translate(-50%, 3vw);
+    top: 72%;
     opacity: 0;
   }
   100% {
@@ -190,17 +190,16 @@ export const ScrollMouse = styled.span`
 
   &:before {
     position: absolute;
-    top: 1vw;
+    top: 16%;
     left: 50%;
     content: "";
-    width: 0.8vw;
-    max-width: 7px;
-    height: 0.8vw;
-    max-height: 7px;
+    width: min(0.8vw, 7px);
+    height: min(0.8vw, 7px);
     background-color: #757575;
     border-radius: 100%;
-    animation: ${ScrollDown} 2s infinite;
+    transform: translateX(-50%);
     box-sizing: border-box;
+    animation: ${ScrollDown} 2s infinite;
   }
 `;
 
