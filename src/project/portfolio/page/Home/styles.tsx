@@ -77,14 +77,14 @@ export const TitleBox = styled.div`
   z-index: 5;
 
   h1 {
-    font-size: 9vw;
+    font-size: clamp(50px, 9vw, 120px);
     line-height: 1.1;
     letter-spacing: -1px;
   }
 
   b {
     display: block;
-    font-size: 10vw;
+    font-size: clamp(56px, 10vw, 140px);
     color: #dc5361;
     animation: ${BlinkEffect} 3s step-end infinite;
   }

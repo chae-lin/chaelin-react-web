@@ -5,22 +5,14 @@ export const SkillList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
+  width: max(84vw, 300px);
   margin: 0 auto;
   gap: 4.6vw;
 `;
 
 export const ProgressBox = styled.div`
   position: relative;
-  width: 23vw;
-
-  @media (max-width: 768px) {
-    width: 146px;
-  }
-
-  @media (max-width: 350px) {
-    width: 130px;
-  }
+  width: clamp(138px, 22vw, 420px);
 `;
 
 export const Title = styled.h3`
@@ -34,13 +26,9 @@ export const BarArea = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  height: 22px;
-  border-radius: 16px;
+  height: clamp(14px, 1vw, 26px);
+  border-radius: 2vw;
   background-color: #3e404c;
-
-  @media (max-width: 768px) {
-    height: 16px;
-  }
 `;
 
 export const BarInner = styled("div", {
