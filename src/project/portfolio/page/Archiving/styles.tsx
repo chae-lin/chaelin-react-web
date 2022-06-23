@@ -36,8 +36,8 @@ export const ProjectImage = styled.h3`
 export const ItemText = styled.button`
   overflow: hidden;
   position: relative;
-  padding: 0.5vw 0.7vw;
-  font-size: 1.3vw;
+  padding: 0.7vw 1vw;
+  font-size: max(1.4vw, 14px);
   font-weight: 800;
   color: #fff;
   border: none;
@@ -90,10 +90,6 @@ export const ItemText = styled.button`
       transform: scale(1.12) rotate(0);
     }
   }
-
-  @media (max-width: 768px) {
-    font-size: 3.6vw;
-  }
 `;
 
 export const ItemInfoList = styled.ul`
@@ -103,28 +99,19 @@ export const ItemInfoList = styled.ul`
 export const ItemInfo = styled.li`
   display: inline-flex;
   width: 100%;
+  margin-top: 0.6vw;
   align-items: center;
-  font-size: 1.2vw;
-  line-height: 1.6;
+  font-size: max(1.3vw, 12px);
+  line-height: 1.2;
   color: #5c5c5c;
 
   &:before {
     content: "";
-    width: 0.4vw;
-    height: 0.4vw;
+    width: max(0.4vw, 3px);
+    height: max(0.4vw, 3px);
     margin-right: 1vw;
     border-radius: 50%;
     background-color: #1f2029;
-  }
-
-  @media (max-width: 768px) {
-    width: 50%;
-    font-size: 2vw;
-
-    &:before {
-      width: 0.6vw;
-      height: 0.6vw;
-    }
   }
 `;
 
