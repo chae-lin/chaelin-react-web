@@ -21,8 +21,8 @@ export const ArchiveItem: FC<Props> = ({
       <S.ProjectImage>
         <img src={imgUrl} alt={title} />
       </S.ProjectImage>
-      <S.ItemText>
-        <button onClick={() => window.open(link, "_blank")}>{text}</button>
+      <S.ItemText onClick={() => window.open(link, "_blank")}>
+        {text}
       </S.ItemText>
       <S.ItemInfoList>
         {infos.map((info, index) => (

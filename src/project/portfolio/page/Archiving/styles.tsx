@@ -10,9 +10,9 @@ export const ArchiveList = styled.div`
 
 export const ArchiveItemWrap = styled.div`
   flex-basis: 36vw;
-  max-width: 700px;
-  padding: 4vw;
-  border-radius: 9vw 1.8vw;
+  max-width: 620px;
+  padding: 3vw;
+  border-radius: 8vw 1vw;
   background-color: #fff;
   box-shadow: 0.4vw 0.4vw 0.8vw 0.4vw #5c5c5c;
   opacity: 0;
@@ -26,80 +26,73 @@ export const ArchiveItemWrap = styled.div`
 `;
 
 export const ProjectImage = styled.h3`
-  width: 18vw;
-  margin-bottom: 2vw;
+  height: max(6vw, 32px);
+  margin: 1vw 0;
   img {
-    width: 100%;
     height: 100%;
   }
 `;
 
-export const ItemText = styled.span`
-  button {
-    overflow: hidden;
-    position: relative;
-    padding: 1vw 1.4vw;
-    font-size: 1.6vw;
-    font-weight: 800;
-    color: #fff;
-    border: none;
-    border-radius: 1vw;
-    background-color: #1d1d1d;
-    box-shadow: 0.3vw 0.5vw 0.5vw 0 rgb(3 6 26 / 15%);
-    transition: 0.5s all ease-in-out;
-    animation: wiggle 4s 2s infinite;
-    cursor: pointer;
+export const ItemText = styled.button`
+  overflow: hidden;
+  position: relative;
+  padding: 0.5vw 0.7vw;
+  font-size: 1.3vw;
+  font-weight: 800;
+  color: #fff;
+  border: none;
+  border-radius: 0.5vw;
+  background-color: #1d1d1d;
+  box-shadow: 0.3vw 0.5vw 0.5vw 0 rgb(3 6 26 / 15%);
+  transition: 0.5s all ease-in-out;
+  animation: wiggle 4s 2s infinite;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    background-color: #dc5361;
+    border-radius: 0.5vw;
+    transition: height cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
+    z-index: -1;
+  }
+  &:hover:after {
+    height: 100%;
+  }
 
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 0;
-      background-color: #dc5361;
-      border-radius: 1vw;
-      transition: height cubic-bezier(0.46, 0.03, 0.52, 0.96) 0.3s;
-      z-index: -1;
+  @keyframes wiggle {
+    5%,
+    50% {
+      transform: scale(1);
     }
-
-    &:hover:after {
-      height: 100%;
+    10% {
+      transform: scale(0.9);
     }
-
-    @keyframes wiggle {
-      5%,
-      50% {
-        transform: scale(1);
-      }
-      10% {
-        transform: scale(0.9);
-      }
-      15% {
-        transform: scale(1.12);
-      }
-      20% {
-        transform: scale(1.12) rotate(-5deg);
-      }
-      25% {
-        transform: scale(1.12) rotate(5deg);
-      }
-      30% {
-        transform: scale(1.12) rotate(-3deg);
-      }
-      35% {
-        transform: scale(1.12) rotate(2deg);
-      }
-      40% {
-        transform: scale(1.12) rotate(0);
-      }
+    15% {
+      transform: scale(1.12);
+    }
+    20% {
+      transform: scale(1.12) rotate(-5deg);
+    }
+    25% {
+      transform: scale(1.12) rotate(5deg);
+    }
+    30% {
+      transform: scale(1.12) rotate(-3deg);
+    }
+    35% {
+      transform: scale(1.12) rotate(2deg);
+    }
+    40% {
+      transform: scale(1.12) rotate(0);
     }
   }
 
   @media (max-width: 768px) {
-    button {
-      font-size: 3.6vw;
-    }
+    font-size: 3.6vw;
   }
 `;
 
@@ -111,8 +104,8 @@ export const ItemInfo = styled.li`
   display: inline-flex;
   width: 100%;
   align-items: center;
-  font-size: 1.6vw;
-  line-height: 1.8;
+  font-size: 1.2vw;
+  line-height: 1.6;
   color: #5c5c5c;
 
   &:before {
