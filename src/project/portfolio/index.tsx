@@ -26,8 +26,6 @@ const Portfolio = () => {
   let propjectY = propjectRef.current?.offsetTop;
   let archivingY = archivingRef.current?.offsetTop;
 
-  console.log(skillY);
-
   const handleClickNave = useCallback(
     (id: string) => {
       switch (id) {

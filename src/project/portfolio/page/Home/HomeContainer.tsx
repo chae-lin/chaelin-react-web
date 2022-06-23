@@ -14,15 +14,6 @@ export const HomeContainer = forwardRef<HTMLDivElement, Props>(
   ({ handleScroll }, ref) => {
     const scrollY = useScroll().scrollY;
 
-    window.addEventListener("scroll", () => {
-      //
-      // var secPos0 = $(".spot").offset().top;
-      // var secPos1 = $(".work").offset().top;
-      // var secPos2 = $(".capability").offset().top - 200;
-      // var secPos3 = $(".contact").offset().top - 200;
-      // // spot Parallax
-    });
-
     return (
       <S.HomeWrap ref={ref}>
         <S.TitleBox style={{ opacity: 1 - scrollY / 500 }}>
