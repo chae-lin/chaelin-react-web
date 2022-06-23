@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/chaelin-react-web/static/js/main.3501a0e0.js",
-    "static/js/557.7a0d515c.chunk.js": "/chaelin-react-web/static/js/557.7a0d515c.chunk.js",
+    "main.js": "/chaelin-react-web/static/js/main.74ce4545.js",
+    "static/js/557.806ba4a5.chunk.js": "/chaelin-react-web/static/js/557.806ba4a5.chunk.js",
     "static/js/173.ae322906.chunk.js": "/chaelin-react-web/static/js/173.ae322906.chunk.js",
     "static/js/138.0e1b9ecd.chunk.js": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js",
     "static/js/787.ce3bae00.chunk.js": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js",
@@ -35,14 +35,14 @@
     "static/media/logo-github.png": "/chaelin-react-web/static/media/logo-github.6a9698194957b982ca6f.png",
     "static/media/bg_project_top1.png": "/chaelin-react-web/static/media/bg_project_top1.38533e0f6a25b8109bd1.png",
     "index.html": "/chaelin-react-web/index.html",
-    "main.3501a0e0.js.map": "/chaelin-react-web/static/js/main.3501a0e0.js.map",
-    "557.7a0d515c.chunk.js.map": "/chaelin-react-web/static/js/557.7a0d515c.chunk.js.map",
+    "main.74ce4545.js.map": "/chaelin-react-web/static/js/main.74ce4545.js.map",
+    "557.806ba4a5.chunk.js.map": "/chaelin-react-web/static/js/557.806ba4a5.chunk.js.map",
     "173.ae322906.chunk.js.map": "/chaelin-react-web/static/js/173.ae322906.chunk.js.map",
     "138.0e1b9ecd.chunk.js.map": "/chaelin-react-web/static/js/138.0e1b9ecd.chunk.js.map",
     "787.ce3bae00.chunk.js.map": "/chaelin-react-web/static/js/787.ce3bae00.chunk.js.map",
     "579.9e3ab84b.chunk.js.map": "/chaelin-react-web/static/js/579.9e3ab84b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3501a0e0.js"
+    "static/js/main.74ce4545.js"
   ]
 }
