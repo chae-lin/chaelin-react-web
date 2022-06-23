@@ -5,28 +5,23 @@ export const ArchiveList = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 6vw;
+  gap: 10vw;
 `;
 
 export const ArchiveItemWrap = styled.div`
-  flex-basis: min(36vw, 560px);
-  padding: min(3vw, 44px);
+  flex-basis: clamp(350px, 28vw, 860px);
+  padding: clamp(26px, 3vw, 84px);
   border-radius: 8vw 1vw;
   background-color: #fff;
   box-shadow: 0.4vw 0.4vw 0.8vw 0.4vw #5c5c5c;
   opacity: 0;
   transform: translateY(30px);
   box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    flex-basis: 70vw;
-    padding: 5vw;
-  }
 `;
 
 export const ProjectImage = styled.h3`
-  height: max(6vw, 32px);
-  margin: 1vw 0;
+  height: clamp(46px, 4vw, 130px);
+  margin-bottom: clamp(6px, 1.2vw, 20px);
   img {
     height: 100%;
   }
@@ -35,8 +30,8 @@ export const ProjectImage = styled.h3`
 export const ItemText = styled.button`
   overflow: hidden;
   position: relative;
-  padding: 0.7vw 1vw;
-  font-size: max(1.4vw, 14px);
+  padding: clamp(26px, 3vw, 84px);
+  font-size: clamp(6px, 0.8vw, 20px);
   font-weight: 800;
   color: #fff;
   border: none;
@@ -92,22 +87,22 @@ export const ItemText = styled.button`
 `;
 
 export const ItemInfoList = styled.ul`
-  margin-top: 1.2vw;
+  margin-top: clamp(8px, 1.2vw, 20px);
 `;
 
 export const ItemInfo = styled.li`
   display: inline-flex;
   width: 100%;
-  margin-top: 0.6vw;
+  margin-top: clamp(8px, 0.4vw, 20px);
   align-items: center;
-  font-size: max(1.3vw, 12px);
+  font-size: clamp(13px, 1vw, 44px);
   line-height: 1.2;
   color: #5c5c5c;
 
   &:before {
     content: "";
-    width: max(0.4vw, 3px);
-    height: max(0.4vw, 3px);
+    width: clamp(3px, 0.4vw, 12px);
+    height: clamp(3px, 0.4vw, 12px);
     margin-right: 1vw;
     border-radius: 50%;
     background-color: #1f2029;
