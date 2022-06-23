@@ -218,7 +218,7 @@ export const BackgroundImage = styled.div`
   right: -20px;
   height: 100%;
   background-position: 50%;
-  opacity: 0.4;
+  opacity: 0.8;
   background-size: cover;
 
   @media (max-width: 768px) {

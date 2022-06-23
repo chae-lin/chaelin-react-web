@@ -26,9 +26,10 @@ export const BarArea = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  height: clamp(12px, 1.4vw, 26px);
+  height: clamp(12px, 1.6vw, 30px);
   border-radius: 2vw;
   background-color: #3e404c;
+  box-shadow: 0 0 0.3vw 0.1vw #5c5c5c;
 `;
 
 export const BarInner = styled("div", {
@@ -47,6 +48,7 @@ export const Bar = styled.span`
   height: 100%;
   background-color: #dc5361;
   border-radius: 16px;
+  box-shadow: 0 0 0.3vw 0.1vw #5c5c5c;
 `;
 
 export const Percent = styled.span`
