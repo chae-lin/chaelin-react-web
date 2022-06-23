@@ -20,7 +20,7 @@ const Wrap = styled.nav`
     padding: 0.5vw;
     border: none;
     background-color: transparent;
-    font-size: clamp(12px, 1.5vw, 24px);
+    font-size: clamp(14px, 1.5vw, 20px);
     color: #757575;
     cursor: pointer;
 

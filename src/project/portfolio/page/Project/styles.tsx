@@ -3,13 +3,12 @@ import { SetionWrap } from "../../common";
 
 export const ProjectList = styled.ul`
   display: flex;
-  max-width: 80vw;
+  width: max(70vw, 300px);
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 4vw;
+  gap: 6vw 4vw;
 
   @media (max-width: 768px) {
-    max-width: 70vw;
     gap: 8vw;
   }
 `;
