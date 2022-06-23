@@ -19,7 +19,7 @@ export const ProjectWrap = styled.div`
   opacity: 0.6;
   transition: opacity ease-in-out 0.1s;
 
-  &:nth-child(2n) {
+  &:nth-of-type(2n) {
     margin-top: -6%;
   }
 
@@ -51,6 +51,13 @@ export const ProjectWrap = styled.div`
 
   @media (max-width: 768px) {
     flex-basis: 100%;
+
+    &:nth-of-type(2n) {
+      margin: 0 -6% 0 0;
+    }
+    &:nth-of-type(2n - 1) {
+      margin-left: -6%;
+    }
   }
 `;
 
