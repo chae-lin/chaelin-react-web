@@ -30,8 +30,8 @@ export const ProjectImage = styled.h3`
 export const ItemText = styled.button`
   overflow: hidden;
   position: relative;
-  padding: clamp(26px, 3vw, 84px);
-  font-size: clamp(6px, 0.8vw, 20px);
+  padding: clamp(14px, 1vw, 84px);
+  font-size: clamp(8px, 1.4vw, 20px);
   font-weight: 800;
   color: #fff;
   border: none;
